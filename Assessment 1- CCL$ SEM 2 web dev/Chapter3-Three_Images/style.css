@@ -1,0 +1,141 @@
+/* Reset default styles */
+* {                                   /* Universal selector - targets EVERY element */
+    margin: 0;                         /* Removes all default margins */
+    padding: 0;                        /* Removes all default padding */
+    box-sizing: border-box;             /* Width/height calculations include padding and border */
+}
+
+body {                                /* Main page body styles */
+    font-family: Arial, sans-serif;    /* Simple, clean sans-serif font stack */
+    background: #f0f0f0;               /* Light gray background */
+    padding: 20px;                      /* 20px padding around entire page content */
+}
+
+h1 {                                  /* Main heading */
+    text-align: center;                 /* Centers the heading text */
+    margin-bottom: 10px;                 /* 10px space below heading */
+    color: #333;                         /* Dark gray text */
+}
+
+.theme {                              /* Theme description paragraph */
+    text-align: center;                 /* Centers the text */
+    margin-bottom: 30px;                 /* 30px space below (separates from gallery) */
+    font-size: 1.2em;                    /* 1.2 × parent font size (slightly larger) */
+    color: #555;                         /* Medium gray text */
+}
+
+.gallery {                            /* Gallery container - flexbox parent */
+    max-width: 1200px;                   /* Maximum width on large screens */
+    margin: 0 auto;                       /* Centers the gallery horizontally */
+    display: flex;                        /* Uses flexbox for layout */
+    flex-wrap: wrap;                      /* Allows cards to wrap to next line on small screens */
+    justify-content: center;               /* Centers cards horizontally */
+    gap: 30px;                             /* 30px space between cards (both rows and columns) */
+}
+
+.image-card {                         /* Individual image card container */
+    flex: 1 1 300px;                     /* Flex-grow: 1, Flex-shrink: 1, Flex-basis: 300px */
+    max-width: 350px;                     /* Prevents card from getting too wide */
+    background: white;                    /* White background */
+    padding: 20px;                        /* 20px internal padding */
+    border-radius: 10px;                  /* 10px rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow: 0 horizontal, 2px down, 5px blur */
+}
+
+img {                                   /* Base styles for ALL images */
+    width: 100%;                          /* Image takes 100% of parent container width */
+    height: auto;                         /* Height adjusts automatically to maintain aspect ratio */
+    display: block;                        /* Removes extra space below image (inline default) */
+    border-radius: 5px;                    /* Slightly rounded corners on images */
+    transition: filter 0.3s ease;          /* Smooth transition when filter changes (0.3 seconds) */
+}
+
+.caption {                              /* Caption container below each image */
+    margin-top: 15px;                      /* 15px space above caption (separates from image) */
+    padding: 10px;                         /* 10px internal padding */
+    background: #f9f9f9;                   /* Very light gray background */
+    border-radius: 5px;                    /* Slightly rounded corners */
+}
+
+.image-title {                          /* Image title text */
+    font-weight: bold;                     /* Bold text */
+    color: #333;                           /* Dark gray */
+    margin-bottom: 5px;                    /* 5px space below title */
+}
+
+.license-info {                         /* License information text */
+    font-size: 0.9em;                      /* 0.9 × parent font size (slightly smaller) */
+    color: #666;                           /* Medium gray */
+    font-style: italic;                    /* Italic text */
+}
+
+/* Button group styles */
+.button-group {                         /* Container for filter buttons */
+    margin-top: 15px;                      /* 15px space above buttons */
+    display: flex;                        /* Flexbox for horizontal layout */
+    gap: 10px;                             /* 10px space between buttons */
+    justify-content: center;               /* Centers buttons horizontally */
+    flex-wrap: wrap;                       /* Allows buttons to wrap on small screens */
+}
+
+.filter-btn {                           /* Filter button styles */
+    padding: 8px 16px;                    /* 8px top/bottom, 16px left/right padding */
+    border: none;                         /* Removes default border */
+    border-radius: 5px;                   /* 5px rounded corners */
+    cursor: pointer;                      /* Changes cursor to hand on hover */
+    font-size: 0.9em;                     /* 0.9 × parent font size */
+    font-weight: bold;                    /* Bold text */
+    transition: all 0.2s ease;            /* Smooth transition for hover effects */
+}
+
+/* Grayscale button (first button) */
+.filter-btn:nth-child(1) {
+    background: #6c757d;                  /* Gray background */
+    color: white;                         /* White text */
+}
+
+.filter-btn:nth-child(1):hover {
+    background: #5a6268;                  /* Darker gray on hover */
+}
+
+/* Sepia button (second button) */
+.filter-btn:nth-child(2) {
+    background: #d4a373;                  /* Warm brown/sepia background */
+    color: white;                         /* White text */
+}
+
+.filter-btn:nth-child(2):hover {
+    background: #c18f55;                  /* Darker brown on hover */
+}
+
+/* Blur button (third button) */
+.filter-btn:nth-child(3) {
+    background: #17a2b8;                  /* Blue/teal background */
+    color: white;                         /* White text */
+}
+
+.filter-btn:nth-child(3):hover {
+    background: #138496;                  /* Darker teal on hover */
+}
+
+/* Clear button styles */
+.clear-btn {                            /* Clear button styles */
+    padding: 8px 16px;                    /* 8px top/bottom, 16px left/right padding */
+    border: none;                         /* Removes default border */
+    border-radius: 5px;                   /* 5px rounded corners */
+    cursor: pointer;                      /* Changes cursor to hand on hover */
+    font-size: 0.9em;                     /* 0.9 × parent font size */
+    font-weight: bold;                    /* Bold text */
+    transition: all 0.2s ease;            /* Smooth transition for hover effects */
+    background: #dc3545;                  /* Red background */
+    color: white;                         /* White text */
+}
+
+.clear-btn:hover {                      /* Clear button hover state */
+    background: #c82333;                  /* Darker red on hover */
+}
+
+.filter-btn:active,                    /* When any button is clicked */
+.clear-btn:active {
+    transform: scale(0.95);               /* Slightly shrink button */
+}

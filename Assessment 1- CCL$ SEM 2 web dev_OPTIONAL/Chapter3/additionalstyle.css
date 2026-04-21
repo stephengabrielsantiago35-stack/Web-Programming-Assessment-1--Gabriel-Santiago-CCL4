@@ -1,0 +1,44 @@
+/* div A - First div (purple border with red drop shadow) */
+div:nth-child(1) {                     /* Selects the FIRST div element (div#A) */
+  border: 6px solid rgb(153, 31, 184);   /* Overrides base border: 6px solid purple (RGB values) */
+  box-shadow: 15px 15px 20px red;        /* Creates outer drop shadow: 
+                                            - 15px right offset
+                                            - 15px down offset  
+                                            - 20px blur radius
+                                            - red color */
+}
+
+/* div B - Second div (green border with inner shadow) */
+div:nth-child(2) {                     /* Selects the SECOND div element (div#B) */
+  border: 6px solid limegreen;           /* Overrides base border: 6px solid bright green */
+  box-shadow: inset 15px 15px 20px black; /* Creates INNER shadow (inset keyword):
+                                            - 15px right offset inside
+                                            - 15px down offset inside
+                                            - 20px blur radius inside
+                                            - black color */
+}
+
+/* div C - Third div (multiple layered borders/outlines) */
+div:nth-child(3) {                     /* Selects the THIRD div element (div#C) */
+  border-radius: 25px;                   /* Rounds all corners by 25px radius */
+  border: 5px solid orange;              /* Overrides base border: 5px solid orange */
+  box-shadow:                            /* Multiple shadows (comma-separated) */
+    0 0 0 10px blue,                     /* First shadow layer: 
+                                            - no offsets
+                                            - no blur
+                                            - 10px spread (creates solid "border" effect)
+                                            - blue */
+    0 0 0 20px red,                      /* Second shadow layer: 20px spread red */
+    0 0 0 30px green;                    /* Third shadow layer: 30px spread green */
+  /* This creates concentric colored rings around the div! */
+}
+
+/* div D - Fourth div (brown border with text shadow) */
+div:nth-child(4) {                     /* Selects the FOURTH div element (div#D) */
+  border: 6px solid brown;               /* Overrides base border: 6px solid brown */
+  text-shadow: 5px 5px 3px gray;         /* Adds shadow to the TEXT only:
+                                            - 5px right offset
+                                            - 5px down offset
+                                            - 3px blur radius
+                                            - gray color */
+}

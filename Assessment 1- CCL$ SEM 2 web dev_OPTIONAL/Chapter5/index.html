@@ -1,0 +1,34 @@
+<!DOCTYPE html>                                      <!-- Declares HTML5 document type -->
+<html lang="en">                                      <!-- Root element with English language setting -->
+<head>                                                <!-- Container for metadata and page information -->
+    <meta charset="UTF-8">                             <!-- Sets character encoding to support all characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes site responsive on mobile devices -->
+    <title>Alan Partridge Soundboard</title>           <!-- Title shown in browser tab -->
+    <link rel="stylesheet" href="style.css">           <!-- Links main external CSS file for styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap" rel="stylesheet"> <!-- Google Fonts: Bangers (comic/cartoon) and Open Sans (clean readable) -->
+</head>
+<body>                                                <!-- All visible page content goes here -->
+    <div class="container">                            <!-- Main container that holds both columns -->
+        <!-- Soundboard column (left) -->
+        <section class="soundboard-column">            <!-- Left column - soundboard buttons -->
+            <h1>🎙️ Alan Partridge Soundboard</h1>      <!-- Main heading with microphone emoji -->
+            <div class="grid-container" id="soundboard-grid"></div> <!-- Grid where sound buttons will be injected by JavaScript -->
+            <!-- Pagination controls -->
+            <div class="pagination">                    <!-- Pagination container for navigating pages -->
+                <button id="prev-page" class="page-arrow" aria-label="Previous page">←</button> <!-- Previous page button with left arrow -->
+                <span id="page-indicator">Page 1</span>  <!-- Shows current page number (updated by JS) -->
+                <button id="next-page" class="page-arrow" aria-label="Next page">→</button> <!-- Next page button with right arrow -->
+            </div>
+        </section>
+
+        <!-- Text‑to‑Speech column (right) -->
+        <aside class="tts-column">                      <!-- Right column - text-to-speech (aside is complementary content) -->
+            <h2>🔊 Text‑to‑Speech</h2>                   <!-- Subheading with speaker emoji -->
+            <p>Type anything Alan might say...</p>       <!-- Instruction text -->
+            <textarea id="tts-text" placeholder="E.g. 'Aha!', 'Dan!', 'Jurassic Park!'" rows="5"></textarea> <!-- Multi-line text input with placeholder examples -->
+            <button id="tts-button" class="tts-button">🔊 Speak it!</button> <!-- Button to trigger text-to-speech -->
+        </aside>
+    </div>
+    <script src="index.js"></script>                   <!-- Links JavaScript file (placed at end for faster page loading) -->
+</body>
+</html>

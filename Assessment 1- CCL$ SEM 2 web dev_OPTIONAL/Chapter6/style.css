@@ -1,0 +1,262 @@
+/* style.css – clean, professional, playful touches */
+
+* {                                   /* Universal selector - targets EVERY element */
+  margin: 0;                          /* Removes all default margins */
+  padding: 0;                         /* Removes all default padding */
+  box-sizing: border-box;              /* Width/height calculations include padding and border */
+  font-family: 'Segoe UI', Roboto, system-ui, sans-serif; /* Modern font stack with fallbacks */
+}
+
+body {                                /* Main page body styles */
+  min-height: 100vh;                   /* Minimum height = 100% of viewport height */
+  background: linear-gradient(145deg, #1e2b3a 0%, #0f1a24 100%); /* Dark diagonal gradient from blue-gray to darker */
+  display: flex;                       /* Uses flexbox for centering */
+  align-items: center;                 /* Centers content vertically */
+  justify-content: center;              /* Centers content horizontally */
+  padding: 1rem;                       /* 1rem padding on all sides (prevents content touching edges on small screens) */
+}
+
+.game-wrapper {                       /* Wrapper container for game card */
+  width: 100%;                          /* Full width of parent */
+  max-width: 750px;                     /* Maximum width on large screens */
+  position: relative;                   /* For absolute positioning of modal if needed */
+}
+
+/* main card – glassmorphism + soft shadows */
+.game-card {                           /* Main game container */
+  background: rgba(255, 255, 255, 0.08); /* Very transparent white background */
+  backdrop-filter: blur(12px);          /* Blurs content behind the element (glass effect) */
+  -webkit-backdrop-filter: blur(12px);  /* Safari support for backdrop filter */
+  border-radius: 2.5rem;                /* 2.5rem rounded corners (very rounded) */
+  padding: 2.2rem 2rem;                 /* 2.2rem top/bottom, 2rem left/right */
+  box-shadow: 0 25px 40px -10px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.1); /* Outer shadow + subtle inner highlight */
+  border: 1px solid rgba(255, 255, 255, 0.03); /* Nearly invisible white border */
+  color: #f0f3f8;                       /* Light gray-blue text color */
+}
+
+h1 {                                   /* Main heading */
+  font-weight: 400;                     /* Normal weight (not bold) */
+  letter-spacing: 2px;                  /* 2px space between letters */
+  font-size: 2rem;                      /* 2 × root font size */
+  margin-bottom: 2rem;                   /* 2rem space below heading */
+  text-align: center;                    /* Centers text horizontally */
+  color: #ffffffd9;                      /* White with 85% opacity */
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle drop shadow for depth */
+  word-break: keep-all;                   /* Prevents word breaking in the middle */
+}
+
+/* stats row */
+.stats-bar {                           /* Statistics bar container */
+  display: flex;                         /* Flexbox for horizontal layout */
+  flex-wrap: wrap;                       /* Allows wrapping on small screens */
+  justify-content: space-between;         /* Spaces items evenly */
+  gap: 1.2rem 1rem;                      /* Row gap:1.2rem, Column gap:1rem */
+  background: rgba(0, 0, 0, 0.25);        /* Semi-transparent black background */
+  padding: 1.2rem 1.8rem;                 /* 1.2rem top/bottom, 1.8rem left/right */
+  border-radius: 4rem;                    /* Very rounded (pill shape) */
+  margin-bottom: 2.5rem;                  /* Space below stats bar */
+  border: 1px solid rgba(255,255,255,0.05); /* Subtle white border */
+  backdrop-filter: blur(4px);              /* Slight blur effect */
+}
+
+.stats-bar > div {                       /* Each stat box inside stats bar */
+  display: flex;                          /* Flexbox for internal layout */
+  align-items: baseline;                  /* Aligns items by their text baseline */
+  gap: 0.4rem 0.8rem;                     /* Row gap:0.4rem, Column gap:0.8rem */
+  flex-wrap: wrap;                        /* Allows wrapping if needed */
+}
+
+.label {                                 /* Stat labels (target, lives, score) */
+  font-size: 0.85rem;                     /* Small font size */
+  text-transform: uppercase;               /* ALL CAPS */
+  letter-spacing: 1.5px;                   /* Extra space between letters */
+  color: #a0b8cc;                          /* Light blue-gray */
+  font-weight: 300;                        /* Light font weight */
+}
+
+.rgb-display {                           /* RGB value display */
+  font-family: 'JetBrains Mono', 'Fira Code', monospace; /* Monospace font for code-like appearance */
+  font-size: 1.3rem;                      /* 1.3 × root font size */
+  font-weight: 600;                        /* Semi-bold */
+  background: #0e1a24;                     /* Very dark blue */
+  padding: 0.3rem 1rem;                    /* 0.3rem top/bottom, 1rem left/right */
+  border-radius: 3rem;                      /* Rounded pill shape */
+  border: 1px solid #3d5a73;                /* Dark green-blue border */
+  box-shadow: inset 0 2px 5px #00000040;    /* Inner shadow for depth */
+  color: #b3e0ff;                           /* Light blue text */
+}
+
+.lives-icons {                            /* Heart icons for lives */
+  font-size: 1.7rem;                       /* Large font size for hearts */
+  line-height: 1;                           /* Removes extra line height */
+  letter-spacing: 5px;                      /* 5px space between hearts */
+  color: #ff8a8a;                           /* Light red/pink */
+  filter: drop-shadow(0 2px 4px #330000);   /* Shadow on hearts (drop-shadow follows shape) */
+}
+
+.score-box span:last-child {               /* The actual score number (last span in score-box) */
+  font-size: 2rem;                          /* Large font */
+  font-weight: 500;                          /* Medium weight */
+  background: #253644;                       /* Dark blue-gray */
+  padding: 0.2rem 1.2rem;                    /* 0.2rem top/bottom, 1.2rem left/right */
+  border-radius: 3rem;                        /* Rounded pill */
+  border: 1px solid #4f7a9e;                  /* Blue border */
+  color: white;                                /* White text */
+}
+
+/* colour grid – 3x2 responsive */
+.grid {                                    /* Grid container for color squares */
+  display: grid;                            /* Uses CSS Grid */
+  grid-template-columns: repeat(3, 1fr);    /* 3 equal-width columns */
+  gap: 1.2rem;                               /* 1.2rem gap between squares */
+  margin-bottom: 2rem;                       /* Space below grid */
+}
+
+.square {                                  /* Individual color squares */
+  aspect-ratio: 1 / 1;                      /* Forces square shape (width = height) */
+  border-radius: 1.8rem;                    /* Rounded corners */
+  background: #2a3b47;                       /* Fallback color (actual color set by JS) */
+  cursor: pointer;                            /* Pointer cursor on hover */
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s; /* Smooth transitions for interactions */
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Semi-transparent white border */
+  box-shadow: 0 12px 20px -8px black;         /* Drop shadow for depth */
+}
+
+.square:hover:not(.disabled) {               /* Hover state for enabled squares only */
+  transform: scale(1.02);                     /* Slightly enlarge (2% bigger) */
+  box-shadow: 0 18px 28px -6px black;          /* Larger shadow on hover */
+  border-color: rgba(255, 255, 255, 0.6);      /* Brighter border on hover */
+}
+
+.square.disabled {                           /* Disabled squares (wrong guesses) */
+  opacity: 0.2;                               /* Very faded */
+  cursor: default;                             /* Default cursor (not pointer) */
+  pointer-events: none;                        /* Cannot be clicked */
+  border-color: transparent;                   /* No border */
+  box-shadow: none;                             /* No shadow */
+}
+
+/* message area */
+.message-area {                              /* Feedback message area */
+  background: rgba(0, 0, 0, 0.5);             /* Semi-transparent black */
+  border-radius: 3rem;                         /* Rounded pill */
+  padding: 0.9rem 1.8rem;                      /* 0.9rem top/bottom, 1.8rem left/right */
+  margin-bottom: 1.8rem;                       /* Space below */
+  font-size: 1.2rem;                           /* 1.2 × root font size */
+  font-weight: 400;                             /* Normal weight */
+  text-align: center;                           /* Centered text */
+  letter-spacing: 0.5px;                        /* Slight letter spacing */
+  border-left: 5px solid #5f9ea0;               /* Cadet blue left border */
+  color: #e0efff;                               /* Very light blue text */
+  backdrop-filter: blur(4px);                    /* Subtle blur effect */
+}
+
+.reset-btn {                                 /* New game button */
+  background: rgba(220, 240, 255, 0.1);       /* Very transparent light blue */
+  border: 1.5px solid #7fa5b8;                 /* Blue-gray border */
+  color: white;                                 /* White text */
+  font-size: 1.2rem;                            /* 1.2 × root font size */
+  padding: 0.8rem 2.2rem;                       /* 0.8rem top/bottom, 2.2rem left/right */
+  border-radius: 3rem;                           /* Rounded pill */
+  cursor: pointer;                               /* Pointer cursor */
+  font-weight: 400;                              /* Normal weight */
+  letter-spacing: 1px;                           /* 1px letter spacing */
+  backdrop-filter: blur(6px);                     /* Blur effect */
+  transition: 0.2s;                               /* Smooth transitions */
+  width: fit-content;                             /* Width fits content (not full width) */
+  margin: 0 auto;                                 /* Centers horizontally */
+  display: block;                                 /* Block display for margin auto to work */
+}
+
+.reset-btn:hover {                           /* Hover state for reset button */
+  background: #3e5f70;                         /* Solid blue-gray */
+  border-color: #b7deff;                        /* Lighter blue border */
+  transform: scale(1.02);                       /* Slightly enlarge */
+  box-shadow: 0 8px 16px #00000060;              /* Shadow on hover */
+}
+
+/* modal overlay */
+.modal-overlay {                             /* Semi-transparent overlay behind modal */
+  position: fixed;                             /* Fixed position (covers entire viewport) */
+  top: 0; left: 0; width: 100%; height: 100%; /* Covers entire screen */
+  background: rgba(0, 0, 0, 0.7);              /* Dark semi-transparent background */
+  backdrop-filter: blur(8px);                   /* Blur background behind modal */
+  display: flex;                                /* Flexbox for centering */
+  align-items: center;                          /* Centers vertically */
+  justify-content: center;                       /* Centers horizontally */
+  z-index: 1000;                                 /* High z-index to appear above everything */
+  visibility: hidden;   /* hidden by default, toggled via JS */
+  opacity: 0;                                   /* Invisible by default */
+  transition: 0.25s ease;                        /* Smooth fade transition */
+}
+
+.modal-overlay.show {                         /* When modal is shown (JS adds this class) */
+  visibility: visible;                          /* Make visible */
+  opacity: 1;                                   /* Fully opaque */
+}
+
+.modal-content {                              /* Modal content container */
+  background: #1c2a35;                          /* Dark blue-gray */
+  padding: 2.5rem 3rem;                         /* 2.5rem top/bottom, 3rem left/right */
+  border-radius: 3rem;                           /* Rounded corners */
+  text-align: center;                            /* Center text */
+  border: 1px solid #698ba0;                     /* Blue-gray border */
+  box-shadow: 0 40px 60px #00000080;              /* Deep shadow for floating effect */
+  max-width: 400px;                               /* Maximum width */
+  width: 90%;                                     /* 90% of parent on small screens */
+  color: white;                                   /* White text */
+}
+
+.modal-content h2 {                           /* Modal heading */
+  font-weight: 300;                             /* Light font weight */
+  font-size: 2.2rem;                            /* 2.2 × root font size */
+  margin-bottom: 1rem;                           /* Space below */
+  color: #ffd78c;                                /* Light orange/yellow */
+}
+
+.final-score-message {                        /* "your final score" text */
+  font-size: 1.4rem;                            /* 1.4 × root font size */
+  color: #b3d0e6;                                /* Light blue */
+  margin-bottom: 0.5rem;                         /* Small space below */
+}
+
+.big-score {                                   /* Large final score number */
+  font-size: 5rem;                               /* 5 × root font size (very large) */
+  font-weight: 600;                               /* Semi-bold */
+  background: #0f1f2b;                            /* Very dark blue */
+  border-radius: 4rem;                             /* Rounded pill */
+  padding: 0.3rem 1rem;                            /* 0.3rem top/bottom, 1rem left/right */
+  width: fit-content;                              /* Width fits content */
+  margin: 1rem auto 1.8rem;                        /* Centered with margins */
+  border: 2px solid #5c8ba0;                       /* Blue border */
+  color: #ffbc6c;                                   /* Orange-yellow text */
+  min-width: 120px;                                 /* Minimum width */
+}
+
+.modal-replay {                                /* Play again button in modal */
+  background: #3c6e8f;                           /* Blue background */
+  border: none;                                    /* No border */
+  color: white;                                    /* White text */
+  font-size: 1.5rem;                               /* 1.5 × root font size */
+  padding: 0.8rem 2.5rem;                          /* 0.8rem top/bottom, 2.5rem left/right */
+  border-radius: 3rem;                              /* Rounded pill */
+  font-weight: 500;                                 /* Medium weight */
+  cursor: pointer;                                   /* Pointer cursor */
+  transition: 0.15s;                                 /* Fast transition */
+  border: 1px solid #a3c6e9;                         /* Light blue border */
+}
+
+.modal-replay:hover {                            /* Hover state for replay button */
+  background: #528bb3;                             /* Lighter blue */
+  transform: scale(1.02);                           /* Slightly enlarge */
+  box-shadow: 0 10px 20px black;                     /* Shadow on hover */
+}
+
+/* responsiveness */
+@media (max-width: 500px) {                      /* Media query for small screens (under 500px) */
+  .game-card { padding: 1.5rem; }                 /* Smaller padding on mobile */
+  .stats-bar { flex-direction: column; align-items: center; } /* Stack stats vertically */
+  .grid { gap: 0.8rem; }                          /* Smaller gap between squares */
+  .square { border-radius: 1.2rem; }              /* Smaller border radius */
+  .rgb-display { font-size: 1rem; }               /* Smaller RGB text */
+}

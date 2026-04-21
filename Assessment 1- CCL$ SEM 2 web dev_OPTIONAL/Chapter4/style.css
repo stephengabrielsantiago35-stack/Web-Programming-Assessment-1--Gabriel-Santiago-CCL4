@@ -1,0 +1,166 @@
+/* ===== RESET & BASE STYLES ===== */
+* {                                   /* Universal selector - targets EVERY element */
+    margin: 0;                        /* Removes all default margins from every element */
+    padding: 0;                       /* Removes all default padding from every element */
+    box-sizing: border-box;            /* Width/height calculations include padding and border */
+}
+
+body {                                /* Main page body styles */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font stack with fallbacks */
+    line-height: 1.6;                  /* Space between lines (1.6 × font size) */
+    background-color: #f9fafc;         /* Very light blue-gray background */
+    color: #1e293b;                    /* Dark slate blue text color */
+    display: flex;                      /* Uses flexbox layout */
+    flex-direction: column;             /* Stacks children vertically (header, main, footer) */
+    min-height: 100vh;                  /* Minimum height = 100% of viewport height */
+    /* ensures footer stays at bottom */
+}
+
+/* ===== HEADER ===== */
+header {                              /* Page header styles */
+    background-color: #0f172a;         /* Very dark navy blue */
+    color: white;                       /* White text */
+    padding: 1.5rem 2rem;               /* 1.5rem top/bottom, 2rem left/right */
+    text-align: center;                  /* Centers text horizontally */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle drop shadow: 0 horizontal, 2px down, 5px blur */
+}
+
+header h1 {                           /* Heading inside header */
+    font-weight: 400;                   /* Normal weight (not bold) */
+    font-size: 2rem;                    /* 2 × root font size */
+    letter-spacing: 1px;                 /* Adds slight space between letters */
+}
+
+/* ===== NAVIGATION ===== */
+nav {                                 /* Navigation bar styles */
+    background-color: #1e293b;         /* Slightly lighter navy than header */
+    padding: 0.75rem 2rem;              /* 0.75rem top/bottom, 2rem left/right */
+}
+
+nav ul {                              /* Unordered list inside nav */
+    list-style: none;                   /* Removes bullet points */
+    display: flex;                      /* Uses flexbox for horizontal layout */
+    justify-content: center;             /* Centers navigation items horizontally */
+    gap: 2.5rem;                        /* 2.5rem space between each nav item */
+}
+
+nav a {                               /* Link styles inside nav */
+    color: #e2e8f0;                    /* Light gray-blue text */
+    text-decoration: none;              /* Removes underline from links */
+    font-weight: 500;                   /* Medium font weight */
+    padding: 0.5rem 0;                  /* 0.5rem top/bottom only (no horizontal padding) */
+    transition: color 0.2s ease;        /* Smooth color change on hover (0.2 seconds) */
+}
+
+nav a:hover {                         /* Hover state for navigation links */
+    color: #facc15;                    /* Bright yellow on hover */
+    /* subtle hover effect, though interactivity not required */
+}
+
+/* ===== MAIN CONTENT – THREE COLUMN GRID ===== */
+main.columns {                        /* Main element with class "columns" */
+    display: grid;                      /* Enables CSS Grid layout */
+    grid-template-columns: repeat(3, 1fr);  /* Creates 3 equal-width columns (1 fraction each) */
+    gap: 2rem;                          /* 2rem gap between grid items (both rows and columns) */
+    padding: 2rem;                      /* 2rem padding on all sides */
+    flex: 1;                            /* Allows main to grow and push footer down */
+    /* allows main to grow and push footer down */
+}
+
+/* Styling for each column (section) */
+.column {                             /* Each column section */
+    background-color: white;            /* White background */
+    border-radius: 12px;                /* Rounded corners: 12px radius */
+    padding: 1.5rem;                    /* 1.5rem internal padding */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Very subtle shadow: 4px down, 10px blur */
+    border: 1px solid #e2e8f0;          /* Light gray border */
+}
+
+.column h2 {                          /* Heading level 2 inside columns */
+    font-size: 1.3rem;                  /* 1.3 × root font size */
+    margin-bottom: 1.5rem;              /* 1.5rem space below heading */
+    padding-bottom: 0.5rem;              /* 0.5rem padding below text (inside border) */
+    border-bottom: 2px solid #e2e8f0;    /* Light gray bottom border */
+    color: #0f172a;                      /* Dark navy text (same as header background) */
+}
+
+/* ===== DEMO ITEMS (ARTICLES) ===== */
+.task-item, .deadline-item, .resource-item {  /* All three item types share these styles */
+    background-color: #f8fafc;           /* Very light blue-gray background */
+    border-left: 4px solid #3b82f6;      /* Left accent border: 4px blue */
+    padding: 1rem;                        /* 1rem padding on all sides */
+    margin-bottom: 1rem;                  /* 1rem space below each item */
+    border-radius: 0 8px 8px 0;           /* Rounded corners: top-right and bottom-right only */
+    transition: transform 0.1s ease;       /* Smooth transform effect (if used) */
+}
+
+/* Slight variation for deadlines and resources */
+.deadline-item {                        /* Override for deadline items */
+    border-left-color: #eab308;          /* Yellow left border */
+}
+
+.resource-item {                        /* Override for resource items */
+    border-left-color: #10b981;          /* Green left border */
+}
+
+/* Item titles */
+.task-item h3, .deadline-item h3, .resource-item h3 {  /* Titles inside all items */
+    font-size: 1.1rem;                    /* 1.1 × root font size */
+    margin-bottom: 0.3rem;                 /* Small space below title */
+    color: #0f172a;                        /* Dark navy text */
+}
+
+.task-item p, .deadline-item p, .resource-item p {  /* Paragraphs inside all items */
+    font-size: 0.9rem;                    /* 0.9 × root font size (slightly smaller) */
+    color: #475569;                        /* Medium slate gray */
+    margin-bottom: 0.8rem;                 /* 0.8rem space below paragraph */
+}
+
+/* ===== BUTTONS (non‑interactive mock‑ups) ===== */
+.mock-button {                          /* Mock button styling */
+    background-color: #e2e8f0;           /* Light gray background */
+    border: none;                         /* No border */
+    border-radius: 20px;                  /* Very rounded corners (pill shape) */
+    padding: 0.4rem 1.2rem;                /* 0.4rem top/bottom, 1.2rem left/right */
+    font-size: 0.85rem;                    /* 0.85 × root font size (small) */
+    font-weight: 500;                      /* Medium font weight */
+    color: #1e293b;                        /* Dark slate blue text */
+    cursor: default;                       /* Shows default cursor (not pointer) - indicates non-interactive */
+    transition: none;                      /* No hover transitions - matches mock‑up */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Subtle shadow: 1px down, 3px blur */
+    display: inline-block;                 /* Allows padding while staying inline */
+}
+
+/* Optional: give different button colours per column if desired */
+.column:nth-child(1) .mock-button {     /* Targets buttons in the FIRST column */
+    background-color: #dbeafe;           /* Light blue background */
+    color: #1e40af;                       /* Darker blue text */
+}
+
+.column:nth-child(2) .mock-button {     /* Targets buttons in the SECOND column */
+    background-color: #fef3c7;           /* Light yellow background */
+    color: #854d0e;                       /* Dark brown/yellow text */
+}
+
+.column:nth-child(3) .mock-button {     /* Targets buttons in the THIRD column */
+    background-color: #d1fae5;           /* Light green background */
+    color: #065f46;                       /* Dark green text */
+}
+
+/* ===== FOOTER ===== */
+footer {                                /* Footer styles */
+    background-color: #0f172a;           /* Dark navy background (matches header) */
+    color: #94a3b8;                       /* Medium gray-blue text */
+    text-align: center;                    /* Centers text */
+    padding: 1rem;                          /* 1rem padding on all sides */
+    font-size: 0.9rem;                      /* 0.9 × root font size */
+    border-top: 1px solid #334155;          /* Dark gray border on top */
+}
+
+/* ===== RESPONSIVE TOUCH (optional) ===== */
+@media (max-width: 800px) {             /* Media query for screens 800px or smaller (tablets/mobile) */
+    main.columns {
+        grid-template-columns: 1fr;       /* Changes from 3 columns to SINGLE column */
+        /* stack on smaller screens */
+    }
+}

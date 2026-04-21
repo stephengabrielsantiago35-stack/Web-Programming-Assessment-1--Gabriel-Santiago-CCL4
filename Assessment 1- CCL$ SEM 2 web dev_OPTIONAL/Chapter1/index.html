@@ -1,0 +1,263 @@
+<!DOCTYPE html>                     <!-- Tells browser this is HTML5 document -->
+<html lang="en">                     <!-- Root element with language set to English -->
+<head>                               <!-- Container for metadata (not displayed on page) -->
+  <meta charset="UTF-8">             <!-- Specifies character encoding (supports all languages) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes site responsive on mobile -->
+  <title>HTML & CSS · quick reference</title> <!-- Text shown in browser tab -->
+  <!-- external stylesheet: style.css (linked below) -->
+  <link rel="stylesheet" href="style.css"> <!-- Connects external CSS file for styling -->
+</head>
+<body>                               <!-- Everything visible on the page goes here -->
+
+<header>                             <!-- Introductory content / site header -->
+  <h1>HTML & CSS quick reference</h1> <!-- Main page heading (most important) -->
+  <p class="subhead">tags, properties, and clean examples — everything covered so far, plus a few extras</p> <!-- Subheading with class for styling -->
+</header>
+
+<main>                               <!-- Main content area (unique to this page) -->
+
+  <!-- ============== HTML SECTION ============== -->
+  <section class="resource-section" id="html-tags"> <!-- Thematic grouping of content -->
+    <h2>📄 HTML tags</h2>            <!-- Section heading (level 2) -->
+    <div class="card-grid">           <!-- Container for grid layout of cards -->
+
+      <!-- 1. headings -->
+      <article class="card">          <!-- Self-contained content block -->
+        <h3>&lt;h1&gt; – &lt;h6&gt;</h3> <!-- Card title (h3) with escaped HTML entities -->
+        <p>heading elements: <code>&lt;h1&gt;</code> highest (most important) to <code>&lt;h6&gt;</code> lowest.</p> <!-- Description with inline code -->
+        <pre><code>&lt;h1&gt;Main page title&lt;/h1&gt;  <!-- Preformatted block showing example -->
+&lt;h2&gt;section heading&lt;/h2&gt;
+&lt;h3&gt;subsection&lt;/h3&gt;</code></pre> <!-- Escaped HTML shows as text, not rendered -->
+      </article>
+
+      <!-- 2. paragraph -->
+      <article class="card">
+        <h3>&lt;p&gt;</h3>
+        <p>paragraph block – standard text container.</p>
+        <pre><code>&lt;p&gt;This is a paragraph of text. It wraps naturally and has spacing above/below.&lt;/p&gt;</code></pre>
+      </article>
+
+      <!-- 3. anchor (link) -->
+      <article class="card">
+        <h3>&lt;a&gt;</h3>
+        <p>anchor / hyperlink. <code>href</code> attribute defines destination.</p> <!-- <code> for attribute name -->
+        <pre><code>&lt;a href="https://example.com"&gt;visit example&lt;/a&gt;  <!-- Real link example -->
+&lt;a href="#top"&gt;back to top&lt;/a&gt;</code></pre> <!-- Internal page link -->
+      </article>
+
+      <!-- 4. image -->
+      <article class="card">
+        <h3>&lt;img&gt;</h3>
+        <p>embeds an image (void element). requires <code>src</code> and <code>alt</code>.</p> <!-- Void = no closing tag -->
+        <pre><code>&lt;img src="photo.jpg" alt="description of image"&gt;</code></pre> <!-- alt is crucial for accessibility -->
+      </article>
+
+      <!-- 5. unordered list + list item -->
+      <article class="card">
+        <h3>&lt;ul&gt; &amp; &lt;li&gt;</h3> <!-- &amp; displays as & (ampersand) -->
+        <p>unordered (bulleted) list. each item inside <code>&lt;li&gt;</code>.</p>
+        <pre><code>&lt;ul&gt;  <!-- Unordered list opening -->
+  &lt;li&gt;First item&lt;/li&gt;  <!-- List item -->
+  &lt;li&gt;Second item&lt;/li&gt;
+&lt;/ul&gt;</code></pre> <!-- Closing tag -->
+      </article>
+
+      <!-- 6. table (with tr, th, td) -->
+      <article class="card">
+        <h3>&lt;table&gt; &lt;tr&gt; &lt;th&gt; &lt;td&gt;</h3>
+        <p>tabular data: rows, header cells, data cells.</p>
+        <pre><code>&lt;table&gt;  <!-- Table container -->
+  &lt;tr&gt;    <!-- Table row -->
+    &lt;th&gt;Name&lt;/th&gt;  <!-- Table header cell -->
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Alex&lt;/td&gt;  <!-- Table data cell -->
+    &lt;td&gt;28&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+      </article>
+
+      <!-- 7. div (block container) -->
+      <article class="card">
+        <h3>&lt;div&gt;</h3>
+        <p>generic block-level container — used for layout and grouping.</p> <!-- Block = takes full width -->
+        <pre><code>&lt;div class="wrapper"&gt;  <!-- Division with class -->
+  &lt;p&gt;content inside a block&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+      </article>
+
+      <!-- 8. span (inline container) -->
+      <article class="card">
+        <h3>&lt;span&gt;</h3>
+        <p>generic inline container, often used for styling a phrase.</p> <!-- Inline = only takes needed space -->
+        <pre><code>&lt;p&gt;this is &lt;span class="highlight"&gt;highlighted&lt;/span&gt; text.&lt;/p&gt;</code></pre>
+      </article>
+
+      <!-- 9. form -->
+      <article class="card">
+        <h3>&lt;form&gt;</h3>
+        <p>section with interactive controls for user input.</p>
+        <pre><code>&lt;form action="/submit" method="post"&gt;  <!-- action = where to send, method = how -->
+  &lt;!-- form elements go here --&gt;  <!-- HTML comment (invisible) -->
+&lt;/form&gt;</code></pre>
+      </article>
+
+      <!-- 10. input -->
+      <article class="card">
+        <h3>&lt;input&gt;</h3>
+        <p>versatile input field. <code>type</code> can be text, email, password, etc.</p>
+        <pre><code>&lt;input type="text" name="username" placeholder="your name"&gt;  <!-- placeholder = hint text -->
+&lt;input type="email" name="email"&gt;</code></pre> <!-- type="email" triggers email keyboard on mobile -->
+      </article>
+
+      <!-- 11. button -->
+      <article class="card">
+        <h3>&lt;button&gt;</h3>
+        <p>clickable button — can be used in forms or with JavaScript.</p>
+        <pre><code>&lt;button type="submit"&gt;send message&lt;/button&gt;  <!-- type="submit" submits parent form -->
+&lt;button onclick="alert('clicked!')"&gt;click me&lt;/button&gt;</code></pre> <!-- onclick runs JavaScript -->
+      </article>
+
+      <!-- 12. label -->
+      <article class="card">
+        <h3>&lt;label&gt;</h3>
+        <p>associates text with an <code>&lt;input&gt;</code> element (improves accessibility).</p>
+        <pre><code>&lt;label for="email"&gt;email address:&lt;/label&gt;  <!-- for attribute matches input id -->
+&lt;input type="email" id="email" name="email"&gt;</code></pre> <!-- id links label to input -->
+      </article>
+
+    </div> <!-- end card-grid (HTML) -->
+  </section>
+
+  <!-- ============== CSS SECTION ============== -->
+  <section class="resource-section" id="css-props">
+    <h2>🎨 CSS properties</h2>
+    <div class="card-grid">
+
+      <!-- 1. color -->
+      <article class="card">
+        <h3>color</h3>
+        <p>sets the foreground text color.</p>
+        <pre><code>p {  <!-- Targets all paragraph elements -->
+  color: #2c3e50;  <!-- Hex color code (dark blue-gray) -->
+}
+.highlight {  <!-- Targets elements with class="highlight" -->
+  color: darkred;  <!-- Named color -->
+}</code></pre>
+      </article>
+
+      <!-- 2. background-color -->
+      <article class="card">
+        <h3>background-color</h3>
+        <p>fills element’s background with a color.</p>
+        <pre><code>div.notice {  <!-- Targets &lt;div class="notice"&gt; -->
+  background-color: #f0f8ff;  <!-- AliceBlue hex -->
+}
+button {  <!-- Targets all button elements -->
+  background-color: #1e90ff;  <!-- DodgerBlue -->
+}</code></pre>
+      </article>
+
+      <!-- 3. font-size -->
+      <article class="card">
+        <h3>font-size</h3>
+        <p>specifies size of the font (px, rem, %, em…).</p>
+        <pre><code>h1 {
+  font-size: 2.5rem;  <!-- 2.5 × root element font size -->
+}
+small {
+  font-size: 0.875em;  <!-- 0.875 × parent element font size -->
+}</code></pre>
+      </article>
+
+      <!-- 4. font-family -->
+      <article class="card">
+        <h3>font-family</h3>
+        <p>defines typeface, with fallback stack.</p>
+        <pre><code>body {
+  font-family: 'Segoe UI', Roboto, sans-serif;  <!-- Uses first available font -->
+}
+code {
+  font-family: 'Courier New', monospace;  <!-- Monospace for code -->
+}</code></pre>
+      </article>
+
+      <!-- 5. margin -->
+      <article class="card">
+        <h3>margin</h3>
+        <p>space outside the element (between elements).</p>
+        <pre><code>.card {
+  margin: 20px;  <!-- 20px on all four sides -->
+}
+h2 {
+  margin-bottom: 0.5rem;  <!-- Only bottom margin -->
+}</code></pre>
+      </article>
+
+      <!-- 6. padding -->
+      <article class="card">
+        <h3>padding</h3>
+        <p>space inside the element, around its content.</p>
+        <pre><code>.card {
+  padding: 1.5rem;  <!-- 1.5rem on all sides -->
+}
+button {
+  padding: 0.6rem 1.2rem;  <!-- vertical | horizontal -->
+}</code></pre>
+      </article>
+
+      <!-- 7. border -->
+      <article class="card">
+        <h3>border</h3>
+        <p>adds a line around the element (width, style, color).</p>
+        <pre><code>pre {
+  border: 1px solid #ccc;  <!-- width style color -->
+}
+input {
+  border: 2px dashed #3498db;  <!-- Dashed style -->
+}</code></pre>
+      </article>
+
+      <!-- 8. display -->
+      <article class="card">
+        <h3>display</h3>
+        <p>changes how an element is rendered (block, inline, flex, grid…).</p>
+        <pre><code>.card-grid {
+  display: grid;  <!-- Creates grid container -->
+  gap: 20px;       <!-- Space between grid items -->
+}
+span.inline-block {
+  display: inline-block;  <!-- Inline but can set width/height -->
+  width: 100px;
+}</code></pre>
+      </article>
+
+      <!-- 9. text-align (bonus extra) -->
+      <article class="card">
+        <h3>text-align</h3>
+        <p>aligns inline content horizontally inside a block.</p>
+        <pre><code>header {
+  text-align: center;  <!-- Centers text horizontally -->
+}
+footer p {
+  text-align: right;  <!-- Right alignment -->
+}</code></pre>
+      </article>
+
+    </div> <!-- end card-grid (CSS) -->
+  </section>
+
+  <!-- extra note: code + pre used throughout -->
+  <section class="note">
+    <p>💡 All code examples use <code>&lt;pre&gt;&lt;code&gt;</code> for correct formatting. Indentation is preserved, and tags are escaped with <code>&amp;lt;</code> and <code>&amp;gt;</code> to display literally.</p> <!-- Explains the technique -->
+  </section>
+</main>
+
+<footer>  <!-- Page footer -->
+  <p>HTML & CSS reference · built with external stylesheet · 12+ tags / 9+ properties</p>
+</footer>
+
+
+</body>
+</html>

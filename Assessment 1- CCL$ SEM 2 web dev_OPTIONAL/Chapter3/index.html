@@ -1,0 +1,30 @@
+<!DOCTYPE html>                         <!-- HTML5 document declaration -->
+<html lang="en">                         <!-- Root element with English language -->
+  <head>                                 <!-- Metadata container -->
+    <meta charset="UTF-8" />              <!-- Character encoding (supports all characters) -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Forces IE to use latest rendering engine -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsive design on mobile -->
+    
+    <!-- CSS FILES - Order matters! Later files can override earlier ones -->
+    <link rel="stylesheet" href="style.css" type="text/css" /> <!-- Base styles for ALL divs -->
+    <link rel="stylesheet" href="additionalStyle.css" type="text/css" /> <!-- Individual styles for each div -->
+    <!-- Note: additionalStyle.css OVERRIDES style.css for specific properties due to CSS cascade -->
+    
+    <title>Styling those divs</title>     <!-- Browser tab title -->
+  </head>
+  <body>                                 <!-- Visible content -->
+    <!-- Four divs with different text labels -->
+    <div>div#A</div>                      <!-- First div - will get styles from: -->
+                                           <!-- - Base styles (style.css) -->
+                                           <!-- - div:nth-child(1) from additionalStyle.css -->
+    
+    <div>div#B</div>                      <!-- Second div - will get: -->
+                                           <!-- - Base styles + div:nth-child(2) styles -->
+    
+    <div>div#C</div>                      <!-- Third div - will get: -->
+                                           <!-- - Base styles + div:nth-child(3) styles -->
+    
+    <div>div#D</div>                      <!-- Fourth div - will get: -->
+                                           <!-- - Base styles + div:nth-child(4) styles -->
+  </body>
+</html>

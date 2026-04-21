@@ -1,0 +1,74 @@
+<!DOCTYPE html>                                      <!-- Declares HTML5 document type -->
+<html lang="en">                                      <!-- Root element with English language setting -->
+<head>                                                <!-- Container for metadata and page information -->
+    <meta charset="UTF-8">                             <!-- Sets character encoding to support all characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes site responsive on mobile devices -->
+    <title>Three Images Exercise</title>                <!-- Title shown in browser tab -->
+    <link rel="stylesheet" href="style.css">           <!-- Links external CSS file for styling -->
+</head>
+<body>                                                <!-- All visible page content goes here -->
+    <h1>Three Images Exercise</h1>                     <!-- Main page heading -->
+    <p class="theme"><strong>Theme:</strong> Nature Landscapes</p> <!-- Theme description with bold text -->
+
+    <div class="gallery">                              <!-- Gallery container - flexbox parent -->
+        <!-- Image 1 - Mountain -->
+        <div class="image-card">                        <!-- Individual image card container -->
+            <img id="img1" src="images/image1.jpg"
+                 alt="Beautiful mountain landscape with snow peaks"
+                 width="800"
+                 height="533"
+                 title="Snow-capped mountains in the Alps">
+            <div class="caption">                        <!-- Caption container below image -->
+                <p class="image-title">Mountain Peak</p> <!-- Image title -->
+                <p class="license-info">License: Free for commercial use</p> <!-- License information -->
+            </div>
+            <div class="button-group">                   <!-- Container for filter buttons -->
+                <button class="filter-btn" data-image="img1" data-filter="grayscale">Grayscale</button>
+                <button class="filter-btn" data-image="img1" data-filter="sepia">Sepia</button>
+                <button class="filter-btn" data-image="img1" data-filter="blur">Blur</button>
+                <button class="clear-btn" data-image="img1">Clear</button> <!-- Clear button -->
+            </div>
+        </div>
+
+        <!-- Image 2 - Ocean -->
+        <div class="image-card">                        <!-- Second image card -->
+            <img id="img2" src="images/image2.jpg"
+                 alt="Sunset over calm ocean water with rocks"
+                 width="800"
+                 height="533"
+                 title="Peaceful ocean sunset with coastal rocks">
+            <div class="caption">
+                <p class="image-title">Ocean Sunset</p> <!-- Image title -->
+                <p class="license-info">License: Free for commercial use</p> <!-- License -->
+            </div>
+            <div class="button-group">                   <!-- Container for filter buttons -->
+                <button class="filter-btn" data-image="img2" data-filter="grayscale">Grayscale</button>
+                <button class="filter-btn" data-image="img2" data-filter="sepia">Sepia</button>
+                <button class="filter-btn" data-image="img2" data-filter="blur">Blur</button>
+                <button class="clear-btn" data-image="img2">Clear</button> <!-- Clear button -->
+            </div>
+        </div>
+
+        <!-- Image 3 - Forest -->
+        <div class="image-card">                        <!-- Third image card -->
+            <img id="img3" src="images/image3.jpg"
+                 alt="Misty forest with green trees and fog"
+                 width="800"
+                 height="533"
+                 title="Enchanting forest shrouded in morning mist">
+            <div class="caption">
+                <p class="image-title">Misty Forest</p> <!-- Image title -->
+                <p class="license-info">License: Free for commercial use</p> <!-- License -->
+            </div>
+            <div class="button-group">                   <!-- Container for filter buttons -->
+                <button class="filter-btn" data-image="img3" data-filter="grayscale">Grayscale</button>
+                <button class="filter-btn" data-image="img3" data-filter="sepia">Sepia</button>
+                <button class="filter-btn" data-image="img3" data-filter="blur">Blur</button>
+                <button class="clear-btn" data-image="img3">Clear</button> <!-- Clear button -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>                   <!-- Links external JavaScript file -->
+</body>
+</html>

@@ -1,0 +1,17 @@
+div {                                 /* Targets ALL div elements on the page */
+  display: inline-block;               /* Makes divs sit side-by-side while allowing width/height */
+  font-family: sans-serif;             /* Sets clean, modern sans-serif font */
+  font-size: 20px;                     /* Sets text size to 20 pixels */
+  margin: 25px;                         /* Adds 25px space on ALL sides of each div (outside border) */
+  border: 4px solid black;              /* Creates 4px solid black border around each div */
+  line-height: 200px;                   /* Sets line height equal to div height (200px) - this vertically centers text! */
+  text-align: center;                   /* Centers text horizontally */
+  width: 200px;                          /* Sets fixed width of 200 pixels */
+  height: 200px;                         /* Sets fixed height of 200 pixels (creates perfect square) */
+}
+
+body {                                 /* Targets the body element */
+  margin: 100px auto;                    /* 100px top/bottom, auto left/right - auto centers the block */
+  width: max-content;                    /* Body width equals width of content (all divs + margins) */
+  background-color: #eee;                 /* Light gray background (#eeeeee) */
+}

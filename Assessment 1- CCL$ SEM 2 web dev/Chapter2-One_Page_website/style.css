@@ -1,0 +1,198 @@
+/* Basic reset */
+* {                                   /* Universal selector - targets EVERY element */
+  box-sizing: border-box;              /* Width/height calculations include padding and border */
+  margin: 0;                           /* Removes all default margins */
+  padding: 0;                          /* Removes all default padding */
+}
+
+body {                                /* Main page body styles */
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for retro 80s feel */
+  line-height: 1.6;                    /* Space between lines (1.6 × font size) */
+  background: #0b0b1a; /* deep navy black */ /* Very dark navy blue background */
+  color: #d4d4f0; /* soft purple-white */ /* Light purple-gray text for contrast */
+}
+
+/* Layout helper */
+.container {                           /* Container for consistent width and centering */
+  width: min(950px, 92%);               /* Takes 950px or 92% of viewport (whichever is smaller) */
+  margin: 0 auto;                       /* Centers container horizontally */
+}
+
+/* Header */
+.header {                              /* Page header styling */
+  padding: 28px 0 20px;                 /* 28px top, 0 right/left, 20px bottom */
+  border-bottom: 2px solid #ff3860; /* bright neon red/pink */ /* Thick red-pink bottom border */
+  background: #111128; /* deep indigo */ /* Dark indigo background */
+}
+
+.title {                               /* Main site title (H1) */
+  font-size: 2.5rem;                    /* 2.5 × root font size */
+  letter-spacing: 1px;                   /* Slight spacing between letters */
+  color: #ffb6c1; /* light pink */      /* Light pink (like show's title color) */
+  text-shadow: 2px 2px 0 #6a0dad; /* purple shadow */ /* Purple drop shadow for retro 3D effect */
+}
+
+.subtitle {                            /* Subtitle under main title */
+  margin-top: 6px;                       /* Small space above */
+  color: #b4b4ff; /* periwinkle */      /* Light blue-purple */
+  font-style: italic;                    /* Italic text */
+}
+
+/* Nav */
+.nav {                                 /* Navigation menu container */
+  margin-top: 16px;                      /* Space above nav */
+  display: flex;                         /* Uses flexbox for horizontal layout */
+  flex-wrap: wrap;                       /* Allows items to wrap on small screens */
+  gap: 10px;                             /* Space between nav items */
+}
+
+.nav-link {                            /* Individual navigation links */
+  text-decoration: none;                 /* Removes underline from links */
+  color: #e0e0ff;                        /* Very light blue-purple */
+  padding: 8px 14px;                     /* 8px top/bottom, 14px left/right */
+  border: 1px solid #ff3860;              /* Red border */
+  border-radius: 4px;                    /* Slightly rounded corners */
+  background: rgba(25, 20, 50, 0.7);      /* Dark purple with 70% opacity */
+  font-weight: 500;                      /* Medium font weight */
+  transition: all 0.2s;                  /* Smooth transition for hover effects (0.2 seconds) */
+}
+
+.nav-link:hover {                       /* Hover state for navigation links */
+  background: #ff3860;                    /* Bright red background */
+  color: #0b0b1a;                         /* Dark text (same as body background) */
+  border-color: #ffffff;                   /* White border */
+}
+
+/* Sections */
+.section {                              /* Generic section styling */
+  padding: 24px 20px;                     /* 24px top/bottom, 20px left/right */
+  margin: 24px 0;                         /* 24px top and bottom, 0 left/right */
+}
+
+.card {                                 /* Card styling for content blocks */
+  border-left: 6px solid #ff3860;          /* Thick red left border */
+  border-radius: 0 12px 12px 0;            /* Rounded corners on right side only */
+  background: #13132b; /* rich dark blue-purple */ /* Dark blue-purple background */
+  box-shadow: 0 8px 0 #0a0a18;              /* Solid shadow underneath for 3D effect */
+}
+
+h2 {                                    /* Section headings */
+  margin-bottom: 16px;                     /* Space below heading */
+  font-size: 1.8rem;                       /* 1.8 × root font size */
+  color: #ff98a8; /* soft red-pink */      /* Light pink-red */
+  letter-spacing: 1px;                      /* Slight letter spacing */
+  border-bottom: 1px dashed #ff3860;         /* Dashed red bottom border */
+  padding-bottom: 6px;                       /* Space between text and border */
+}
+
+.list {                                 /* Styled lists */
+  margin-left: 20px;                        /* Left indent for list */
+  color: #c8c8ff;                           /* Light purple */
+}
+
+.list li {                               /* Each list item */
+  margin-bottom: 8px;                       /* Space between list items */
+}
+
+.list li::marker {                       /* Styles the bullet/number marker of list items */
+  color: #ff3860;                           /* Red markers */
+  content: "► ";                            /* Replaces default bullet with triangle symbol */
+  font-size: 1.1rem;                         /* Slightly larger marker */
+}
+
+.muted {                                 /* Less prominent text */
+  color: #a0a0d0;                           /* Muted purple-gray */
+  margin-bottom: 10px;                       /* Space below */
+}
+
+/* Reviews box */
+.review-box {                            /* Special box for reviews section */
+  margin-top: 20px;                          /* Space above */
+  padding: 18px;                             /* Internal padding */
+  border: 1px solid #ff3860;                  /* Red border */
+  background: #0d0d22;                        /* Very dark background */
+  border-radius: 8px;                         /* Rounded corners */
+  box-shadow: inset 0 0 10px rgba(255, 56, 96, 0.2); /* Inner red glow */
+}
+
+.review-line {                            /* Individual review lines */
+  margin-top: 8px;                            /* Space between reviews */
+  padding-left: 8px;                          /* Left padding */
+  border-left: 3px solid #ff98a8;               /* Light pink left border */
+}
+
+.review-line strong {                      /* Bold text inside reviews */
+  color: #ffb0c0;                             /* Light pink-red */
+}
+
+/* Button-style link (requirement) */
+.btn {                                   /* Button-style links */
+  display: inline-block;                      /* Allows padding while staying inline */
+  margin-top: 12px;                            /* Space above */
+  text-decoration: none;                       /* No underline */
+  color: #0b0b1a;                              /* Dark text */
+  background: #ff3860;                          /* Bright red background */
+  padding: 12px 24px;                           /* 12px top/bottom, 24px left/right */
+  border-radius: 6px;                           /* Rounded corners */
+  font-weight: 700;                             /* Bold text */
+  font-size: 1.2rem;                             /* Larger font */
+  letter-spacing: 1px;                            /* Letter spacing */
+  border: 2px solid #ffb6c1;                      /* Light pink border */
+  box-shadow: 0 6px 0 #941c38;                     /* Dark red shadow for 3D effect */
+  transition: all 0.1s ease;                       /* Fast transition */
+  text-transform: uppercase;                       /* ALL CAPS */
+}
+
+.btn:hover {                               /* Hover state for buttons */
+  background: #ff5779;                           /* Lighter red */
+  transform: translateY(2px);                     /* Moves button down 2px (press effect) */
+  box-shadow: 0 4px 0 #941c38;                     /* Smaller shadow (button appears pressed) */
+}
+
+/* Footer */
+.footer {                                /* Page footer */
+  padding: 28px 0;                               /* 28px top/bottom only */
+  margin-top: 40px;                              /* Space above footer */
+  border-top: 2px solid #ff3860;                  /* Red top border */
+  background: #111128;                            /* Same as header background */
+  text-align: center;                             /* Center text */
+}
+
+.back-top {                              /* Back to top link */
+  display: inline-block;                         /* Allows padding */
+  margin-top: 12px;                               /* Space above */
+  color: #ffb6c1;                                 /* Light pink */
+  text-decoration: none;                          /* No underline */
+  padding: 6px 16px;                               /* 6px top/bottom, 16px left/right */
+  border: 1px solid #ff3860;                        /* Red border */
+  border-radius: 20px;                              /* Very rounded (pill shape) */
+  font-weight: bold;                                /* Bold text */
+  transition: all 0.2s;                             /* Smooth transition */
+}
+
+.back-top:hover {                            /* Hover state for back to top */
+  background: #ff3860;                             /* Red background */
+  color: #0b0b1a;                                   /* Dark text */
+  text-decoration: none;                            /* No underline */
+}
+
+/* Responsive fix */
+@media (max-width: 600px) {                      /* Media query for screens 600px and smaller (mobile) */
+  .title {
+    font-size: 2rem;                               /* Smaller title on mobile */
+  }
+  
+  .nav {
+    flex-direction: column;                        /* Stack nav items vertically */
+    align-items: stretch;                           /* Make them full width */
+  }
+  
+  .nav-link {
+    text-align: center;                             /* Center text in nav links */
+  }
+  
+  .btn {
+    display: block;                                 /* Make button full width */
+    text-align: center;                              /* Center text */
+  }
+}

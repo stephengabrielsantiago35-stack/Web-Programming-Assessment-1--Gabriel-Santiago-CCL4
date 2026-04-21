@@ -1,0 +1,178 @@
+/* style.css – external stylesheet for quick reference guide */
+
+/* ---------- global reset & base ---------- */
+* {  /* Universal selector - targets EVERY element */
+  margin: 0;  /* Removes default margins */
+  padding: 0;  /* Removes default padding */
+  box-sizing: border-box;  /* Width/height include padding/border */
+}
+
+body {  /* Styles for the body element */
+  background: #f6f9fc;  /* soft, professional background */
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;  /* Font stack with fallbacks */
+  line-height: 1.6;  /* Space between lines (1.6 × font size) */
+  color: #1a2634;  /* Dark blue-gray text color */
+  padding: 2rem 1.5rem;  /* 2rem top/bottom, 1.5rem left/right */
+  max-width: 1400px;  /* Won't stretch beyond 1400px on big screens */
+  margin: 0 auto;  /* Centers the body horizontally */
+}
+
+/* ---------- headers – variety of styles ---------- */
+h1 {  /* Main page heading */
+  font-size: 2.8rem;  /* 2.8 × root font size */
+  font-weight: 600;  /* Semi-bold (400=normal, 700=bold) */
+  letter-spacing: -0.02em;  /* Slightly tighter character spacing */
+  background: linear-gradient(145deg, #0b3b5c, #1e5f8e);  /* Gradient background */
+  -webkit-background-clip: text;  /* Clips gradient to text (WebKit) */
+  -webkit-text-fill-color: transparent;  /* Makes text transparent so gradient shows (WebKit) */
+  background-clip: text;  /* Standard property for clipping to text */
+  margin-bottom: 0.5rem;  /* Space below heading */
+  border-left: 8px solid #2c7eb6;  /* Thick blue left border */
+  padding-left: 1.5rem;  /* Space between border and text */
+}
+
+h2 {  /* Section headings */
+  font-size: 2.2rem;
+  font-weight: 500;  /* Medium weight */
+  color: #0d3b5e;
+  margin: 2rem 0 1.5rem 0;  /* top | right | bottom | left */
+  border-bottom: 3px solid rgba(44, 126, 182, 0.3);  /* Semi-transparent border */
+  padding-bottom: 0.4rem;
+}
+
+h3 {  /* Card titles */
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #1e4a6b;
+  margin-bottom: 0.75rem;
+  display: inline-block;  /* Allows padding without taking full width */
+  background: rgba(44, 126, 182, 0.1);  /* Very light blue background */
+  padding: 0.2rem 0.8rem;  /* Small padding around text */
+  border-radius: 30px;  /* Creates pill shape */
+}
+
+/* ---------- header subhead ---------- */
+.subhead {  /* Class for subtitle under main heading */
+  font-size: 1.2rem;
+  color: #3a5670;
+  margin-bottom: 2rem;
+  font-weight: 300;  /* Light weight */
+  border-left: 4px solid #84b3d6;  /* Thinner left border */
+  padding-left: 1.2rem;
+}
+
+/* ---------- layout containers ---------- */
+.resource-section {  /* Each major section (HTML, CSS) */
+  margin: 3rem 0;  /* 3rem top and bottom */
+}
+
+.card-grid {  /* Grid container for cards */
+  display: grid;  /* Enables CSS Grid */
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));  /* Creates responsive columns: minimum 330px, maximum 1 fraction of available space */
+  gap: 1.8rem;  /* Space between grid items */
+  margin-top: 1rem;
+}
+
+/* ---------- card styling ---------- */
+.card {  /* Individual card */
+  background: #ffffff;  /* White background */
+  border-radius: 24px;  /* Rounded corners */
+  padding: 1.6rem 1.6rem 2rem 1.6rem;  /* Extra bottom padding */
+  box-shadow: 0 10px 20px rgba(0, 30, 50, 0.08), 0 6px 6px rgba(0, 20, 40, 0.05);  /* Two layered shadows for depth */
+  transition: transform 0.15s ease, box-shadow 0.2s ease;  /* Smooth animation on hover */
+  border: 1px solid rgba(160, 190, 220, 0.3);  /* Very subtle border */
+}
+
+.card:hover {  /* Styles when mouse hovers over card */
+  transform: translateY(-4px);  /* Lifts card up by 4px */
+  box-shadow: 0 24px 36px -12px rgba(20, 60, 100, 0.25);  /* Larger, softer shadow */
+}
+
+.card p {  /* Paragraphs inside cards */
+  color: #2d3f53;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;  /* Slightly smaller than base */
+}
+
+/* ---------- code / pre formatting ---------- */
+pre {  /* Preformatted text block */
+  background: #1e2b37;   /* dark slate for contrast */
+  color: #e4f0fb;  /* Light blue text */
+  padding: 1.2rem 1rem;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  overflow-x: auto;  /* Adds horizontal scroll if needed */
+  box-shadow: inset 0 0 0 1px #30455b;  /* Inner border */
+  margin: 1rem 0 0 0;
+  white-space: pre-wrap;      /* preserve indentation but wrap if needed */
+  word-break: break-word;  /* Breaks long words if necessary */
+}
+
+code {  /* Inline code */
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Courier New', monospace;  /* Monospace fonts */
+  font-size: 0.9em;
+  background-color: #eef3f8;  /* Light blue-gray */
+  color: #1d4a76;  /* Dark blue */
+  padding: 0.2rem 0.4rem;
+  border-radius: 8px;
+  border: 1px solid #bdd3e8;  /* Light blue border */
+}
+
+pre code {  /* Code inside pre blocks (overrides inline styles) */
+  background: transparent;  /* No background */
+  color: inherit;  /* Uses pre's text color */
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  display: block;  /* Makes it a block element */
+}
+
+/* ---------- footer & note ---------- */
+.note {  /* Special note section at bottom */
+  background: #d9e7f2;
+  border-radius: 40px;  /* Very rounded */
+  padding: 1.2rem 2rem;
+  margin: 2.5rem 0 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+  border-left: 8px solid #2c7eb6;  /* Thick blue left border */
+  color: #1b3a4f;
+}
+
+footer {  /* Page footer */
+  text-align: center;
+  font-size: 0.95rem;
+  color: #4d6278;
+  border-top: 2px dashed #b7cfdf;  /* Dashed line above footer */
+  padding-top: 2rem;
+  margin-top: 3rem;
+}
+
+/* ---------- inline code inside cards (for tag names) ---------- */
+.card h3 code {  /* Targets code elements inside card headings */
+  background: none;  /* Removes background */
+  border: none;
+  font-size: inherit;  /* Uses h3's font size */
+  padding: 0;
+  color: inherit;  /* Uses h3's text color */
+  font-weight: 600;
+}
+
+/* ---------- responsive tweaks ---------- */
+@media (max-width: 600px) {  /* Styles for screens smaller than 600px (mobile) */
+  body {
+    padding: 1rem;  /* Less padding on mobile */
+  }
+  h1 {
+    font-size: 2rem;  /* Smaller heading */
+    padding-left: 1rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  .card-grid {
+    grid-template-columns: 1fr;  /* Single column layout */
+  }
+}

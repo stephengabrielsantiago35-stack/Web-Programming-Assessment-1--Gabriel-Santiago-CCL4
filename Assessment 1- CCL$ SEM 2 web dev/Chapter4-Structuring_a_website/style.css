@@ -1,0 +1,166 @@
+/* Global Styles */
+* {                                   /* Universal selector - targets EVERY element */
+    margin: 0;                         /* Removes all default margins */
+    padding: 0;                        /* Removes all default padding */
+    box-sizing: border-box;             /* Width/height calculations include padding and border */
+}
+
+body {                                /* Main page body styles */
+    font-family: Arial, sans-serif;    /* Clean, sans-serif font stack */
+    font-weight: 400;                  /* Normal font weight (400 is standard) */
+    color: #000000;                     /* Pure black text */
+    background-color: #ffffff;           /* Pure white background */
+    line-height: 1.5;                    /* Space between lines (1.5 × font size) */
+}
+
+.container {                           /* Main container for centering content */
+    max-width: 1100px;                   /* Maximum width on large screens */
+    margin: 0 auto;                       /* Centers container horizontally */
+    padding: 20px;                        /* 20px padding on all sides */
+}
+
+/* Header */
+header {                               /* Header section styling */
+    background-color: #17072b;           /* Dark purple background */
+    padding: 30px 30px 15px 30px;        /* 30px top, 30px right, 15px bottom, 30px left */
+}
+
+header h1 {                            /* Main heading inside header */
+    font-family: Tahoma, sans-serif;     /* Tahoma font (more structured) */
+    font-weight: 700;                    /* Bold font weight (700) */
+    color: #ffffff;                       /* White text */
+    font-size: 2.8rem;                    /* 2.8 × root font size (large) */
+}
+
+/* Navigation */
+nav {                                  /* Navigation bar styling */
+    background-color: #17072b;           /* Same dark purple as header */
+    padding: 0 30px 25px 30px;            /* 0 top, 30px right, 25px bottom, 30px left */
+}
+
+nav ul {                                /* Unordered list in navigation */
+    list-style: none;                     /* Removes bullet points */
+    display: flex;                        /* Uses flexbox for horizontal layout */
+    gap: 35px;                            /* 35px space between each nav item */
+}
+
+nav a {                                 /* Navigation links */
+    font-family: Arial, sans-serif;       /* Arial font for links */
+    color: #ffffff;                        /* White text */
+    text-decoration: none;                  /* Removes underline */
+    font-size: 1.2rem;                      /* 1.2 × root font size */
+}
+
+nav a:hover {                           /* Hover state for navigation links */
+    text-decoration: underline;            /* Adds underline on hover */
+}
+
+/* Main Content Layout (two columns) */
+.main-content {                         /* Flex container for main + aside */
+    display: flex;                        /* Enables flexbox for two columns */
+    gap: 30px;                             /* 30px gap between columns */
+    margin: 30px 0;                        /* 30px top and bottom margin */
+}
+
+/* Welcome Column (Left) */
+main {                                  /* Left column - main content */
+    flex: 2;                              /* Takes 2/3 of available space (2 parts) */
+}
+
+.welcome-section h2 {                   /* Welcome heading */
+    font-family: Tahoma, sans-serif;      /* Tahoma font */
+    font-weight: 700;                     /* Bold */
+    font-size: 2rem;                       /* 2 × root font size */
+    color: #000000;                        /* Black text */
+    border-bottom: 3px solid #17072b;      /* 3px dark purple bottom border */
+    padding-bottom: 8px;                    /* 8px space between text and border */
+    margin-bottom: 20px;                    /* 20px space below heading */
+}
+
+.welcome-section p {                    /* Welcome paragraph */
+    font-size: 1.1rem;                    /* 1.1 × root font size */
+    margin-bottom: 20px;                   /* 20px space below paragraph */
+}
+
+.welcome-image {                        /* Main image in welcome section */
+    width: 100%;                           /* Full width of parent container */
+    height: auto;                          /* Height adjusts to maintain aspect ratio */
+    max-height: 250px;                     /* Maximum height limit */
+    object-fit: cover;                     /* Crops image to fit dimensions without distortion */
+    border-radius: 5px;                    /* Slightly rounded corners */
+    border: 2px solid #17072b;              /* Dark purple border */
+    display: block;                         /* Removes extra space below image */
+}
+
+/* Line Up Sidebar (Right) */
+.lineup-sidebar {                       /* Right column - sidebar */
+    flex: 1;                               /* Takes 1/3 of available space (1 part) */
+    background-color: #172d67;              /* Lighter blue-purple background */
+    color: #ffffff;                         /* White text */
+    padding: 25px;                          /* 25px internal padding */
+}
+
+.lineup-sidebar h3 {                    /* Sidebar heading (Line Up) */
+    font-family: Tahoma, sans-serif;       /* Tahoma font */
+    font-weight: 700;                      /* Bold */
+    font-size: 1.8rem;                     /* 1.8 × root font size */
+    color: #ffffff;                         /* White text */
+    border-bottom: 2px solid #8c15e9;       /* 2px bright purple bottom border */
+    padding-bottom: 8px;                     /* 8px space below text */
+    margin-bottom: 20px;                     /* 20px space below heading */
+}
+
+.lineup-list {                           /* List of events in sidebar */
+    list-style: none;                      /* Removes default bullets */
+    margin-bottom: 25px;                    /* 25px space below list */
+}
+
+.lineup-list li {                        /* Each event list item */
+    font-size: 1.1rem;                     /* 1.1 × root font size */
+    margin-bottom: 10px;                    /* 10px space between items */
+}
+
+/* Two square images container */
+.image-pair {                            /* Container for two square images */
+    display: flex;                          /* Flexbox for side-by-side layout */
+    gap: 15px;                              /* 15px gap between images */
+}
+
+.square-img {                            /* Individual square images */
+    width: calc(50% - 7.5px);               /* Half of container minus half the gap (15px/2) */
+    height: auto;                           /* Height adjusts */
+    aspect-ratio: 1/1;                      /* Forces perfect square shape (width = height) */
+    object-fit: cover;                      /* Crops image to fit square without distortion */
+    border-radius: 5px;                     /* Slightly rounded corners */
+    border: 2px solid #8c15e9;               /* Bright purple border */
+}
+
+/* Footer */
+footer {                                 /* Page footer */
+    background-color: #8c15e9;              /* Bright purple background */
+    color: #ffffff;                          /* White text */
+    text-align: center;                      /* Centers text */
+    padding: 15px 0;                         /* 15px top/bottom, 0 left/right */
+    margin-top: 20px;                        /* 20px space above footer */
+    font-size: 1rem;                         /* 1 × root font size */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 700px) {              /* Media query for screens 700px or smaller */
+    .main-content {
+        flex-direction: column;              /* Stacks columns vertically */
+    }
+    
+    nav ul {
+        flex-wrap: wrap;                     /* Allows nav items to wrap */
+        gap: 20px;                           /* Smaller gap on mobile */
+    }
+    
+    header h1 {
+        font-size: 2.2rem;                    /* Smaller heading on mobile */
+    }
+    
+    .welcome-image {
+        max-height: 200px;                     /* Smaller image on mobile */
+    }
+}

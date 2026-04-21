@@ -1,0 +1,112 @@
+/* Reset and consistent sizing */
+* {                                   /* Universal selector - targets EVERY element */
+  box-sizing: border-box;              /* Width/height calculations include padding and border */
+}
+
+body {                                /* Main page body styles */
+  margin: 0;                           /* Removes default body margin (browsers add 8px by default) */
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; /* Modern font stack with system defaults */
+  line-height: 1.6;                    /* Space between lines (1.6 × font size) - improves readability */
+  background: #0b1220;                  /* Very dark navy-blue background */
+  color: #e5e7eb;                       /* Light gray text for good contrast on dark background */
+}
+
+/* Top header bar */
+.topbar {                             /* Header bar container (NOTE: This class isn't used in index.html!) */
+  padding: 28px 0;                     /* 28px top/bottom padding, 0 left/right */
+  background: #0f172a;                  /* Slightly lighter dark navy */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12); /* Subtle semi-transparent white border */
+}
+
+.topbar h1 {                           /* Heading inside topbar (not used in current HTML) */
+  margin: 0;                            /* Remove default margin */
+  font-size: 2rem;                      /* 2 × root font size */
+  text-align: center;                    /* Center the text */
+}
+
+.topbar p {                            /* Paragraph inside topbar (not used in current HTML) */
+  margin: 8px auto 0;                   /* 8px top, auto left/right (centers), 0 bottom */
+  text-align: center;                    /* Center text */
+  max-width: 70ch;                       /* Maximum width of 70 characters (improves readability) */
+  color: #cbd5e1;                        /* Light blue-gray text */
+}
+
+.container {                           /* Main container class used in HTML */
+  width: min(1100px, 92%);              /* Takes 1100px or 92% of viewport (whichever is smaller) */
+  margin: 24px auto 60px;                /* 24px top, auto left/right (centers), 60px bottom */
+}
+
+/* Card layout blocks */
+.card {                                /* Card styling for content blocks (NOTE: Not used in current HTML!) */
+  background: rgba(255, 255, 255, 0.04); /* Very subtle white transparency */
+  padding: 18px;                         /* 18px padding on all sides */
+  margin: 16px 0;                        /* 16px top and bottom, 0 left/right */
+  border: 1px solid rgba(255, 255, 255, 0.12); /* Subtle semi-transparent border */
+  border-radius: 14px;                    /* 14px rounded corners */
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35); /* Deep shadow for floating effect */
+}
+
+h2 {                                   /* Level 2 headings (Ingredients, Method) */
+  margin: 0 0 12px;                     /* 0 top, 0 left/right, 12px bottom */
+  font-size: 1.4rem;                    /* 1.4 × root font size */
+}
+
+h3 {                                   /* Level 3 headings (not used in current HTML) */
+  margin: 18px 0 8px;                   /* 18px top, 0 left/right, 8px bottom */
+  font-size: 1.1rem;                    /* 1.1 × root font size */
+  color: #c7d2fe;                        /* Light purple-blue */
+}
+
+a {                                    /* Link styling (not used in current HTML) */
+  color: #93c5fd;                        /* Light blue */
+  text-decoration: none;                  /* Remove underline */
+}
+
+a:hover {                              /* Hover state for links */
+  text-decoration: underline;            /* Add underline on hover */
+}
+
+/* Table styling */
+table {                                /* Table element (not used in current HTML) */
+  width: 100%;                           /* Full width of container */
+  border-collapse: collapse;              /* Remove double borders between cells */
+  margin-top: 10px;                       /* 10px space above */
+}
+
+th,                                    /* Table header cells */
+td {                                   /* Table data cells */
+  border: 1px solid rgba(255, 255, 255, 0.12); /* Subtle borders */
+  padding: 10px;                          /* 10px padding inside cells */
+  vertical-align: top;                    /* Align content to top of cell */
+}
+
+th {                                   /* Table header specific styling */
+  background: rgba(255, 255, 255, 0.06);  /* Slightly more opaque than regular cells */
+  text-align: left;                       /* Left-align header text */
+}
+
+/* Code styling */
+code {                                 /* Inline code elements (not used in current HTML) */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;             /* Monospace font stack */
+  background: rgba(255, 255, 255, 0.08);  /* Subtle background */
+  padding: 2px 6px;                       /* 2px top/bottom, 6px left/right */
+  border-radius: 8px;                     /* Rounded corners */
+}
+
+pre {                                  /* Preformatted text blocks (not used in current HTML) */
+  background: rgba(0, 0, 0, 0.35);       /* Semi-transparent black */
+  padding: 14px;                          /* 14px padding */
+  border-radius: 12px;                    /* Rounded corners */
+  overflow: auto;                          /* Add scrollbars if content overflows */
+  border: 1px solid rgba(255, 255, 255, 0.12); /* Subtle border */
+}
+
+/* Footer */
+.footer {                              /* Footer styling - used in HTML */
+  padding: 18px 0;                       /* 18px top/bottom, 0 left/right */
+  text-align: center;                    /* Center the text */
+  color: #aab3c5;                        /* Muted blue-gray text */
+  border-top: 1px solid rgba(255, 255, 255, 0.12); /* Subtle top border */
+  background: #0f172a;                    /* Dark navy background (matches header) */
+}

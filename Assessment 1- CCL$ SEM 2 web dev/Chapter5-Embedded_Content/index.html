@@ -1,0 +1,108 @@
+<!DOCTYPE html>                                      <!-- Declares HTML5 document type -->
+<html lang="en">                                      <!-- Root element with English language setting -->
+<head>                                                <!-- Container for metadata and page information -->
+    <meta charset="UTF-8">                            <!-- Sets character encoding to support all characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes site responsive on mobile devices -->
+    <title>Embed Video Exercise</title>                <!-- Title shown in browser tab -->
+    
+    <!-- Internal CSS styles (embedded in HTML for this exercise) -->
+    <style>
+        /* Universal reset - targets every element */
+        * {
+            margin: 0;                                /* Removes all default margins */
+            padding: 0;                               /* Removes all default padding */
+            box-sizing: border-box;                   /* Width/height include padding and border */
+        }
+
+        /* Body styles - centers everything beautifully */
+        body {
+            font-family: Arial, sans-serif;           /* Clean, sans-serif font */
+            min-height: 100vh;                         /* Minimum height = 100% of viewport height */
+            display: flex;                              /* Uses flexbox for centering */
+            justify-content: center;                    /* Centers horizontally */
+            align-items: center;                        /* Centers vertically */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Purple-blue diagonal gradient */
+            margin: 0;                                  /* Removes default body margin */
+            padding: 20px;                              /* 20px padding on all sides (prevents content touching edges) */
+        }
+
+        /* Video container - the card that holds the video */
+        .video-container {
+            max-width: 800px;                           /* Maximum width on large screens */
+            width: 100%;                                 /* Full width of parent up to max-width */
+            background: rgba(255, 255, 255, 0.1);        /* Semi-transparent white (10% opacity) */
+            border-radius: 20px;                         /* 20px rounded corners */
+            padding: 20px;                               /* 20px internal padding */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);  /* Deep shadow: 0 horizontal, 20px down, 40px blur */
+            backdrop-filter: blur(5px);                  /* Blurs background behind container (glass effect) */
+        }
+
+        /* Video element styling */
+        video {
+            width: 100%;                                  /* Full width of container */
+            height: auto;                                 /* Height adjusts to maintain aspect ratio */
+            border-radius: 15px;                          /* 15px rounded corners */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);   /* Shadow: 0 horizontal, 10px down, 30px blur */
+            display: block;                               /* Removes extra space below video (inline default) */
+        }
+
+        /* Fallback message styling - shown if video can't play */
+        .fallback-message {
+            text-align: center;                           /* Centers text */
+            padding: 40px;                                /* 40px internal padding */
+            background: #f8f9fa;                          /* Light gray background */
+            border-radius: 15px;                          /* 15px rounded corners */
+            color: #333;                                  /* Dark gray text */
+            font-size: 1.1rem;                            /* 1.1 × root font size */
+        }
+
+        /* Link inside fallback message */
+        .fallback-message a {
+            color: #667eea;                               /* Purple-blue color (matches gradient) */
+            text-decoration: none;                        /* No underline */
+            font-weight: bold;                             /* Bold text */
+        }
+
+        /* Hover state for fallback link */
+        .fallback-message a:hover {
+            text-decoration: underline;                   /* Underline on hover */
+        }
+
+        /* Video info section - below the video */
+        .video-info {
+            margin-top: 15px;                              /* 15px space above */
+            color: white;                                   /* White text */
+            text-align: center;                             /* Centers text */
+            font-size: 0.9rem;                              /* 0.9 × root font size (slightly smaller) */
+            opacity: 0.9;                                    /* 90% opacity (slightly transparent) */
+        }
+    </style>
+</head>
+<body>                                                <!-- All visible content -->
+    <div class="video-container">                     <!-- Main container card -->
+        
+        <!-- Locally hosted video with poster image and loop -->
+        <video 
+            controls                                   
+            loop                                      
+            poster="images/video-poster.jpg"         
+            preload="metadata"                          
+        >
+            <!-- MP4 format (best browser support) - works in all modern browsers -->
+            <source src="vids/sample-20s.mp4" type="video/mp4">
+            
+            <!-- WebM format (alternative) - better compression, good for Chrome/Firefox -->
+            <source src="vids/sample-15s.webm" type="video/webm">
+            
+            <!-- Fallback content - displayed if browser doesn't support video tag or sources -->
+            Your browser does not support the video tag. 
+            <a href="vids/sample-20s.mp4">Download the video</a> instead.
+        </video>
+        
+        <!-- Video information footer -->
+        <div class="video-info">
+            <p>✨ Video loops automatically • Poster image displayed before playback ✨</p> <!-- Instructional text with emojis -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>                                      <!-- Declares HTML5 document type -->
+<html lang="en">                                      <!-- Root element with English language setting -->
+<head>                                                <!-- Container for metadata and page information -->
+  <meta charset="UTF-8">                              <!-- Sets character encoding to support all characters -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes site responsive on mobile devices -->
+  <title>RGB · colour guess</title>                    <!-- Title shown in browser tab -->
+  <!-- clean, modern styling – linked in style.css -->
+  <link rel="stylesheet" href="style.css">            <!-- Links external CSS file for styling -->
+</head>
+<body>                                                <!-- All visible page content goes here -->
+  <div class="game-wrapper">                           <!-- Wrapper container to center and constrain width -->
+    <!-- main game panel -->
+    <div class="game-card">                            <!-- Main game card with glass morphism effect -->
+      <h1>🎨 RGB GUESS</h1>                            <!-- Main heading with paint palette emoji -->
+      
+      <!-- target & stats -->
+      <div class="stats-bar">                          <!-- Statistics bar container -->
+        <div class="target-box">                       <!-- Target RGB display box -->
+          <span class="label">target</span>            <!-- Label for target -->
+          <span class="rgb-display" id="rgbValue">rgb(0, 0, 0)</span> <!-- Shows target RGB value (updated by JS) -->
+        </div>
+        <div class="lives-box">                        <!-- Lives display box -->
+          <span class="label">lives</span>             <!-- Label for lives -->
+          <span class="lives-icons" id="livesDisplay">❤️❤️❤️</span> <!-- Shows hearts for remaining lives -->
+        </div>
+        <div class="score-box">                        <!-- Score display box -->
+          <span class="label">score</span>             <!-- Label for score -->
+          <span id="scoreDisplay">0</span>             <!-- Current score (updated by JS) -->
+        </div>
+      </div>
+
+      <!-- colour squares grid (6 squares) -->
+      <div class="grid" id="gridContainer"></div>      <!-- Grid container - squares will be injected by JavaScript -->
+
+      <!-- feedback message -->
+      <div class="message-area" id="messageArea">➤ click a colour</div> <!-- Feedback area for game messages -->
+
+      <!-- manual reset button (always visible) -->
+      <button class="reset-btn" id="resetGameBtn">⟲ new game</button> <!-- Button to manually reset the game -->
+    </div>
+
+    <!-- game over modal (hidden by default) -->
+    <div class="modal-overlay" id="gameOverModal">     <!-- Modal overlay (semi-transparent background) -->
+      <div class="modal-content">                      <!-- Modal content container -->
+        <h2>✨ game finished ✨</h2>                    <!-- Modal heading -->
+        <p class="final-score-message">your final score</p> <!-- Message before score -->
+        <div class="big-score" id="finalScoreSpan">0</div> <!-- Large final score display -->
+        <button class="modal-replay" id="replayBtn">play again</button> <!-- Button to replay from modal -->
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>                     <!-- Links JavaScript file (placed at end for faster page loading) -->
+</body>
+</html>

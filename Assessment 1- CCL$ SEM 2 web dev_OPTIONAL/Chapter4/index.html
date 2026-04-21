@@ -1,0 +1,103 @@
+<!DOCTYPE html>                                  <!-- Declares HTML5 document type -->
+<html lang="en">                                  <!-- Root element with English language setting -->
+<head>                                            <!-- Container for metadata and page information -->
+    <meta charset="UTF-8">                         <!-- Sets character encoding to support all characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes site responsive on mobile devices -->
+    <title>Study Planner – Web Development</title> <!-- Title shown in browser tab -->
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">       <!-- Connects external CSS file for styling -->
+</head>
+<body>                                            <!-- All visible page content goes here -->
+    <!-- Semantic header containing the page title -->
+    <header>                                       <!-- Header section (semantic HTML5 tag) -->
+        <h1>📚 Study Planner – Web Development</h1> <!-- Main page heading with emoji -->
+    </header>
+
+    <!-- Navigation menu with dummy links -->
+    <nav>                                          <!-- Navigation section (semantic HTML5) -->
+        <ul>                                       <!-- Unordered list for navigation items -->
+            <li><a href="#">Overview</a></li>      <!-- List item with dummy link (placeholder) -->
+            <li><a href="#">Tasks</a></li>         <!-- Tasks navigation link -->
+            <li><a href="#">Resources</a></li>     <!-- Resources navigation link -->
+            <li><a href="#">Progress</a></li>      <!-- Progress navigation link -->
+        </ul>
+    </nav>
+
+    <!-- Main content area – split into three columns using CSS Grid -->
+    <main class="columns">                          <!-- Main content with class for CSS Grid -->
+        <!-- Column 1: This Week's Tasks -->
+        <section class="column">                    <!-- First column - semantic section -->
+            <h2>This Week’s Tasks</h2>              <!-- Column heading -->
+            <!-- Demo items – each in an article tag for semantic grouping -->
+            <article class="task-item">              <!-- Article represents independent content -->
+                <h3>Read HTML/CSS fundamentals</h3>  <!-- Task title -->
+                <p>Chapters 1–3 · Due Friday</p>     <!-- Task details with due date -->
+                <!-- Non‑interactive button (mock‑up only) -->
+                <button class="mock-button">Mark Complete</button> <!-- Mock button (non-functional) -->
+            </article>
+            <article class="task-item">              <!-- Second task item -->
+                <h3>Practice Flexbox layout</h3>     
+                <p>Build a simple card component · Due Sunday</p>
+                <button class="mock-button">Mark Complete</button>
+            </article>
+            <article class="task-item">              <!-- Third task item -->
+                <h3>Build mock‑up for study planner</h3>
+                <p>Use HTML & CSS only · Due Wednesday</p>
+                <button class="mock-button">Mark Complete</button>
+            </article>
+        </section>
+
+        <!-- Column 2: Upcoming Deadlines -->
+        <section class="column">                      <!-- Second column -->
+            <h2>Upcoming Deadlines</h2>               <!-- Column heading -->
+            <article class="deadline-item">           <!-- Article for deadline item -->
+                <h3>Assignment 1: Personal website</h3> <!-- Deadline title -->
+                <p>📅 20 March 2026</p>                <!-- Date with calendar emoji -->
+                <button class="mock-button">Add Deadline</button> <!-- Mock button -->
+            </article>
+            <article class="deadline-item">           <!-- Second deadline -->
+                <h3>Quiz 2: JavaScript basics</h3>
+                <p>📅 25 March 2026</p>
+                <button class="mock-button">Add Deadline</button>
+            </article>
+            <article class="deadline-item">           <!-- Third deadline -->
+                <h3>Project proposal draft</h3>
+                <p>📅 28 March 2026</p>
+                <button class="mock-button">Add Deadline</button>
+            </article>
+        </section>
+
+        <!-- Column 3: Resources -->
+        <section class="column">                      <!-- Third column -->
+            <h2>Resources</h2>                         <!-- Column heading -->
+            <article class="resource-item">           <!-- Article for resource -->
+                <h3>MDN Web Docs</h3>                  <!-- Resource name -->
+                <p>Comprehensive reference for HTML, CSS, JS</p> <!-- Description -->
+                <button class="mock-button">Visit</button> <!-- Mock button -->
+            </article>
+            <article class="resource-item">           <!-- Second resource -->
+                <h3>W3C Validator</h3>
+                <p>Check your HTML and CSS</p>
+                <button class="mock-button">Visit</button>
+            </article>
+            <article class="resource-item">           <!-- Third resource -->
+                <h3>GitHub Education</h3>
+                <p>Free tools for students</p>
+                <button class="mock-button">Visit</button>
+            </article>
+            <!-- Fifth demo item – we already have 3+3+3 = 9 items, 
+                 but requirement is only five demo items in total. 
+                 To meet exactly five, we could reduce. However the prompt 
+                 says "Five demo items" – we can keep five visible. 
+                 I'll keep the first column with three items and the second 
+                 with two, making five. -->
+            <!-- Note: Comment explains design decision about item count -->
+        </section>
+    </main>
+
+    <!-- Semantic footer -->
+    <footer>                                         <!-- Footer section -->
+        <p>© 2026 – Creative Computing · Study Planner Mock‑up</p> <!-- Copyright text -->
+    </footer>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>                                      <!-- Declares HTML5 document type -->
+<html lang="en">                                      <!-- Root element with English language setting -->
+<head>                                                <!-- Container for metadata and page information -->
+  <meta charset="UTF-8" />                            <!-- Sets character encoding to support all characters -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Makes site responsive on mobile devices -->
+  <title>Stranger Things | One-Page Website</title>    <!-- Title shown in browser tab -->
+  <link rel="stylesheet" href="style.css" />          <!-- Links external CSS file for styling -->
+</head>
+
+<body>                                                <!-- All visible page content goes here -->
+  <header class="header">                              <!-- Page header section -->
+    <div class="container">                            <!-- Container to center content and control width -->
+      <h1 class="title">Stranger Things</h1>           <!-- Main page heading (most important) -->
+      <p class="subtitle">A simple one-page website (text only)</p> <!-- Subtitle description -->
+
+      <nav class="nav">                                <!-- Navigation menu container -->
+        <a class="nav-link" href="#plot">Plot</a>      <!-- Link to Plot section (using ID anchor) -->
+        <a class="nav-link" href="#key-info">Key Info</a> <!-- Link to Key Info section -->
+        <a class="nav-link" href="#cast-team">Cast & Creative Team</a> <!-- Link to Cast section -->
+        <a class="nav-link" href="#characters">Characters</a> <!-- Link to Characters section -->
+        <a class="nav-link" href="#reviews">Reviews</a> <!-- Link to Reviews section -->
+        <a class="nav-link" href="#official">Official Site</a> <!-- Link to Official section -->
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">                             <!-- Main content area (unique to this page) -->
+    <!-- Plot Section -->
+    <section id="plot" class="section card">           <!-- Section with ID for anchor linking, card styling -->
+      <h2>Plot Overview</h2>                            <!-- Section heading -->
+      <p>                                                <!-- Paragraph of plot description -->
+        In a small town, a boy goes missing and strange events begin to ripple through everyone's lives.
+        A group of friends investigates, uncovering secret experiments, frightening creatures, and a parallel world.
+        The story mixes friendship, mystery, and sci-fi horror with an 80s vibe.
+      </p>
+    </section>
+
+    <!-- Key Information Section -->
+    <section id="key-info" class="section card">       <!-- Key info section -->
+      <h2>Key Information</h2>                          <!-- Section heading -->
+      <ul class="list">                                  <!-- Unordered list with custom styling -->
+        <li><strong>Genre:</strong> Sci-fi, thriller, horror, drama</li> <!-- Bold label, regular text -->
+        <li><strong>Setting:</strong> Hawkins, Indiana (1980s)</li>
+        <li><strong>Themes:</strong> Friendship, courage, secrecy, growing up</li>
+        <li><strong>Format:</strong> TV series</li>
+      </ul>
+    </section>
+
+    <!-- Cast and Creative Team Section -->
+    <section id="cast-team" class="section card">       <!-- Cast section -->
+      <h2>Cast and Creative Team</h2>                    <!-- Section heading -->
+      <p class="muted">You can edit these names to match your chosen film/game/series.</p> <!-- Muted instruction text -->
+      <ul class="list">                                   <!-- Unordered list -->
+        <li><strong>Creators:</strong> The Duffer Brothers</li>
+        <li><strong>Main Cast:</strong> Millie Bobby Brown, Finn Wolfhard, Winona Ryder, David Harbour</li>
+        <li><strong>Music (notable):</strong> Synth-heavy score that matches the 80s tone</li>
+      </ul>
+    </section>
+
+    <!-- Characters Section -->
+    <section id="characters" class="section card">      <!-- Characters section -->
+      <h2>Characters</h2>                                <!-- Section heading -->
+      <ul class="list">                                   <!-- Unordered list -->
+        <li><strong>Eleven:</strong> A powerful kid with a mysterious past.</li>
+        <li><strong>Mike:</strong> Loyal friend, determined to find the truth.</li>
+        <li><strong>Dustin:</strong> Funny, clever, always asking questions.</li>
+        <li><strong>Lucas:</strong> Practical, cautious, brave when it counts.</li>
+        <li><strong>Joyce:</strong> A mother who refuses to give up.</li>
+      </ul>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="section card">         <!-- Reviews section -->
+      <h2>Reviews (Summary)</h2>                         <!-- Section heading -->
+      <p>                                                 <!-- Review summary paragraph -->
+        Many viewers praise the show for its suspense, characters, and nostalgic style.
+        Some critics highlight its strong first season mystery and memorable monster-story tension.
+        Others say later seasons focus more on action and scale, but the heart of the series stays the friendships.
+      </p>
+
+      <div class="review-box">                           <!-- Special box for review highlights -->
+        <p class="review-line"><strong>Common compliment:</strong> "Great atmosphere and a bingeable mystery."</p> <!-- Review with left border accent -->
+        <p class="review-line"><strong>Common critique:</strong> "Sometimes the story gets bigger than the small-town vibe."</p>
+      </div>
+    </section>
+
+    <!-- Official Site Section -->
+    <section id="official" class="section card">        <!-- Official site section -->
+      <h2>Official Website</h2>                          <!-- Section heading -->
+      <p>                                                 <!-- Descriptive text -->
+        This link opens in a new tab, and it's styled like a button:
+      </p>
+
+      <a class="btn" href="https://www.netflix.com/title/80057281" target="_blank" rel="noopener noreferrer">
+        <!-- Button-style link: opens in new tab, with security attributes -->
+        Visit Official Page                                <!-- Button text -->
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">                                <!-- Page footer -->
+    <div class="container">                              <!-- Container for consistent width -->
+      <p class="muted">Made for Chapter 2: One-page website exercise.</p> <!-- Muted footer text -->
+      <a class="back-top" href="#top">Back to top</a>    <!-- Link that scrolls to top of page -->
+    </div>
+  </footer>
+</body>
+</html>
