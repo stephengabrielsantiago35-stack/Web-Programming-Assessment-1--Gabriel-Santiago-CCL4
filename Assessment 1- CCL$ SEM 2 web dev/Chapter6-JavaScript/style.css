@@ -1,0 +1,229 @@
+/* ========================================
+   Petrol Calculator Styles
+   Author: Student
+   Description: Clean and professional styling
+   ======================================== */
+
+/* Reset and base styles */
+* {                                   /* Universal selector - targets EVERY element */
+    margin: 0;                         /* Removes all default margins */
+    padding: 0;                        /* Removes all default padding */
+    box-sizing: border-box;             /* Width/height calculations include padding and border */
+}
+
+/* Body styles - gradient background */
+body {                                /* Main page body styles */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font stack */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Purple-blue diagonal gradient */
+    min-height: 100vh;                  /* Minimum height = 100% of viewport height */
+    display: flex;                      /* Uses flexbox for centering */
+    justify-content: center;             /* Centers horizontally */
+    align-items: center;                 /* Centers vertically */
+    padding: 20px;                       /* 20px padding on all sides (prevents content touching edges) */
+}
+
+/* Main container */
+.container {                           /* White card container */
+    max-width: 500px;                    /* Maximum width on large screens */
+    width: 100%;                          /* Full width of parent up to max-width */
+    background: white;                    /* White background */
+    border-radius: 20px;                  /* 20px rounded corners */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); /* Deep shadow: 0 horizontal, 20px down, 60px blur */
+    overflow: hidden;                      /* Prevents content from spilling outside rounded corners */
+    animation: slideIn 0.5s ease-out;      /* Applies slide-in animation on page load */
+}
+
+/* Slide in animation */
+@keyframes slideIn {                     /* Defines the slideIn animation */
+    from {                               /* Starting state */
+        transform: translateY(-50px);      /* Start 50px above final position */
+        opacity: 0;                        /* Start invisible */
+    }
+    to {                                 /* Ending state */
+        transform: translateY(0);          /* End at normal position */
+        opacity: 1;                        /* End fully visible */
+    }
+}
+
+/* Header styles */
+header {                               /* Page header */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Same gradient as body */
+    color: white;                         /* White text */
+    padding: 30px;                        /* 30px padding on all sides */
+    text-align: center;                   /* Centers text horizontally */
+}
+
+header h1 {                            /* Main heading */
+    font-size: 2.2rem;                    /* 2.2 × root font size */
+    margin-bottom: 10px;                   /* 10px space below heading */
+    font-weight: 600;                      /* Semi-bold */
+    letter-spacing: 1px;                   /* 1px space between letters */
+}
+
+.subtitle {                             /* Subtitle text */
+    font-size: 1rem;                       /* 1 × root font size */
+    opacity: 0.9;                           /* 90% opacity (slightly transparent) */
+    font-style: italic;                     /* Italic text */
+}
+
+/* Main content */
+main {                                  /* Main content area */
+    padding: 30px;                        /* 30px internal padding */
+}
+
+/* Calculator card */
+.calculator-card {                      /* Inner card for calculator */
+    background: #f8f9fa;                  /* Very light gray background */
+    border-radius: 15px;                   /* 15px rounded corners */
+    padding: 25px;                         /* 25px internal padding */
+    margin-bottom: 20px;                   /* 20px space below card */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Input group styles */
+.input-group {                          /* Container for label + input pairs */
+    margin-bottom: 25px;                   /* 25px space between input groups */
+}
+
+.input-group label {                    /* Labels for inputs */
+    display: block;                        /* Makes label take full width (puts on its own line) */
+    margin-bottom: 8px;                    /* 8px space below label */
+    font-weight: 600;                      /* Semi-bold text */
+    color: #333;                           /* Dark gray */
+    font-size: 1rem;                       /* 1 × root font size */
+}
+
+/* Form input styles */
+.form-input {                           /* Text input fields */
+    width: 100%;                           /* Full width of container */
+    padding: 12px 15px;                    /* 12px top/bottom, 15px left/right */
+    font-size: 1.1rem;                     /* 1.1 × root font size */
+    border: 2px solid #e0e0e0;              /* Light gray border */
+    border-radius: 10px;                    /* 10px rounded corners */
+    transition: all 0.3s ease;              /* Smooth transition for hover/focus effects */
+    background: white;                       /* White background */
+}
+
+/* Focus state - clearly shows when input is active */
+.form-input:focus {                      /* When input is selected/clicked */
+    outline: none;                          /* Removes default browser outline */
+    border-color: #667eea;                   /* Changes border to purple */
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1); /* Subtle purple glow */
+    transform: scale(1.02);                  /* Slightly enlarges (2% bigger) */
+}
+
+/* Hover state for inputs */
+.form-input:hover {                      /* When mouse hovers over input */
+    border-color: #764ba2;                   /* Changes to darker purple */
+}
+
+/* Input hint text */
+.input-hint {                            /* Small helper text below inputs */
+    display: block;                         /* Takes full width */
+    margin-top: 5px;                        /* 5px space above */
+    font-size: 0.8rem;                      /* 0.8 × root font size (small) */
+    color: #666;                            /* Medium gray */
+    font-style: italic;                      /* Italic text */
+}
+
+/* Calculate button styles */
+.calculate-btn {                         /* Main action button */
+    width: 100%;                            /* Full width of container */
+    padding: 15px;                          /* 15px padding on all sides */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Purple gradient */
+    color: white;                           /* White text */
+    border: none;                           /* No border */
+    border-radius: 10px;                    /* 10px rounded corners */
+    font-size: 1.2rem;                      /* 1.2 × root font size */
+    font-weight: 600;                       /* Semi-bold */
+    cursor: pointer;                        /* Changes cursor to pointer on hover */
+    transition: all 0.3s ease;              /* Smooth transition for hover effects */
+    text-transform: uppercase;               /* ALL CAPS */
+    letter-spacing: 1px;                    /* 1px space between letters */
+    margin-bottom: 20px;                    /* 20px space below button */
+}
+
+/* Button hover effect */
+.calculate-btn:hover {                   /* When mouse hovers over button */
+    transform: translateY(-2px);            /* Moves button up 2px (lift effect) */
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4); /* Purple shadow for depth */
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%); /* Reversed gradient */
+}
+
+/* Button active state */
+.calculate-btn:active {                  /* When button is being clicked */
+    transform: translateY(0);               /* Returns to original position */
+    box-shadow: 0 5px 10px rgba(102, 126, 234, 0.3); /* Smaller shadow */
+}
+
+/* Result section */
+.result-section {                        /* Container for calculation result */
+    background: white;                      /* White background */
+    border-radius: 10px;                    /* 10px rounded corners */
+    padding: 15px;                          /* 15px internal padding */
+    text-align: center;                     /* Centers text */
+    border: 2px solid #e0e0e0;              /* Light gray border */
+}
+
+.result-label {                          /* "Total Cost:" label */
+    font-size: 1rem;                        /* 1 × root font size */
+    color: #666;                            /* Medium gray */
+    margin-bottom: 5px;                     /* 5px space below */
+}
+
+.total-cost {                            /* The actual calculated amount */
+    font-size: 2.5rem;                      /* 2.5 × root font size (large) */
+    font-weight: 700;                       /* Bold */
+    color: #667eea;                         /* Purple */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Info box */
+.info-box {                              /* Information box at bottom */
+    background: #e8f4fd;                   /* Light blue background */
+    border-left: 4px solid #667eea;        /* Purple left border */
+    padding: 15px;                         /* 15px internal padding */
+    border-radius: 8px;                    /* 8px rounded corners */
+    font-size: 0.95rem;                    /* 0.95 × root font size */
+    color: #333;                           /* Dark gray text */
+}
+
+/* Footer styles */
+footer {                                 /* Page footer */
+    background: #f0f0f0;                   /* Light gray background */
+    padding: 15px;                         /* 15px internal padding */
+    text-align: center;                    /* Centers text */
+    color: #666;                           /* Medium gray text */
+    font-size: 0.9rem;                     /* 0.9 × root font size */
+    border-top: 1px solid #ddd;             /* Light gray top border */
+}
+
+/* Responsive design */
+@media (max-width: 500px) {              /* Media query for screens 500px or smaller (mobile) */
+    .container {
+        margin: 10px;                       /* Smaller margin on mobile */
+    }
+    
+    header h1 {
+        font-size: 1.8rem;                   /* Smaller heading on mobile */
+    }
+    
+    main {
+        padding: 20px;                        /* Smaller padding on mobile */
+    }
+    
+    .total-cost {
+        font-size: 2rem;                      /* Smaller result on mobile */
+    }
+}
+
+/* Remove spinner arrows from number inputs */
+input[type=number]::-webkit-inner-spin-button,  /* Targets the up/down arrows in number inputs */
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 0.5;                            /* Makes arrows semi-transparent by default */
+}
+
+input[type=number]:hover::-webkit-inner-spin-button, /* When hovering over the input */
+input[type=number]:hover::-webkit-outer-spin-button {
+    opacity: 1;                              /* Makes arrows fully visible on hover */
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>                                      <!-- Declares HTML5 document type -->
+<html lang="en">                                      <!-- Root element with English language setting -->
+<head>                                                <!-- Container for metadata and page information -->
+    <meta charset="UTF-8">                            <!-- Sets character encoding to support all characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes site responsive on mobile devices -->
+    <title>Petrol Calculator</title>                  <!-- Title shown in browser tab -->
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">          <!-- Links external CSS file for styling -->
+</head>
+<body>                                                <!-- All visible page content goes here -->
+    <div class="container">                           <!-- Main container - centers content and controls width -->
+        
+        <!-- Header section -->
+        <header>                                      <!-- Page header -->
+            <h1>⛽ Petrol Calculator</h1>              <!-- Main heading with fuel pump emoji -->
+            <p class="subtitle">Calculate your fuel cost instantly</p> <!-- Subtitle description -->
+        </header>
+
+        <!-- Main calculator section -->
+        <main>                                        <!-- Main content area -->
+            
+            <!-- Calculator form -->
+            <div class="calculator-card">             <!-- Card container for calculator -->
+                
+                <!-- Cost per liter input field -->
+                <div class="input-group">              <!-- Groups label and input together -->
+                    <label for="costPerLiter">💰 Cost per liter (£):</label> <!-- Label with money emoji -->
+                    <input type="number" id="costPerLiter" class="form-input" step="0.01" min="0" value="1.72" placeholder="Enter cost per liter">
+                    <!-- 
+                        type="number" - restricts to numeric input
+                        step="0.01" - allows 2 decimal places (pence)
+                        min="0" - prevents negative values
+                        value="1.72" - default UK petrol price
+                        placeholder - hint text when empty
+                    -->
+                    <small class="input-hint">Default: £1.72 per liter</small> <!-- Helper text -->
+                </div>
+
+                <!-- Liters purchased input field -->
+                <div class="input-group">              <!-- Groups label and input together -->
+                    <label for="liters">⛽ Liters purchased:</label> <!-- Label with fuel pump emoji -->
+                    <input type="number" id="liters" class="form-input" step="0.1" min="0" value="0" placeholder="Enter liters">
+                    <!-- 
+                        step="0.1" - allows 1 decimal place for precise liter amounts
+                        value="0" - default to zero
+                    -->
+                    <small class="input-hint">Default: 0 liters</small> <!-- Helper text -->
+                </div>
+
+                <!-- Calculate button with hover effect -->
+                <button id="calculateBtn" class="calculate-btn">Calculate Total</button> <!-- Main action button -->
+
+                <!-- Result display section -->
+                <div class="result-section">           <!-- Container for showing result -->
+                    <p class="result-label">Total Cost:</p> <!-- Label for result -->
+                    <p id="totalCost" class="total-cost">£0.00</p> <!-- Dynamic result display (updated by JS) -->
+                </div>
+            </div>
+
+            <!-- Information box -->
+            <div class="info-box">                     <!-- Helpful info box -->
+                <p>💡 Enter the price per liter and the number of liters to calculate your total fuel cost.</p> <!-- Instruction text with lightbulb emoji -->
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>                                       <!-- Page footer -->
+            <p>&copy; 2025 Petrol Calculator | All prices in GBP (£)</p> <!-- Copyright and currency info -->
+        </footer>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>                  <!-- Links JavaScript file (placed at end for faster loading) -->
+</body>
+</html>
